@@ -1,0 +1,3 @@
+DADOS_CONV_SAULO.dat		Dados de precipitações diárias máximas anuais das estações convencionais do Brasil obtidos pelo Saulo (ANA)
+explore_daily_precip.qmd	Script Dirceu que organiza os dados de DADOS_CONV_SAULO
+df.precip.diaria.txt		Resultado do script explore_daily_precip, usado p/ rodar o código de análise exploratória e ajuste da GEV

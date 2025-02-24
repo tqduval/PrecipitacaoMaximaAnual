@@ -1,0 +1,590 @@
+Estação;Data;P [mm];Filtro;Estação;Data;P [mm];Filtro;Estação;Data;P [mm];Filtro
+57000;1987;99,4;kappa > 0,50;1757003;1996;104,4;kappa > 0,50;2452012;1966;55;Mais de 5 anos consecutivos sem dados
+57000;1993;98,5;kappa > 0,50;1757003;1997;135,6;kappa > 0,50;2452012;1967;86,2;Mais de 5 anos consecutivos sem dados
+57000;1995;108,1;kappa > 0,50;1757003;1998;125,3;kappa > 0,50;2452012;1968;73,5;Mais de 5 anos consecutivos sem dados
+57000;1996;145,2;kappa > 0,50;1757003;2000;125,6;kappa > 0,50;2452012;1969;74,1;Mais de 5 anos consecutivos sem dados
+57000;1997;40,7;kappa > 0,50;1757003;2001;102,1;kappa > 0,50;2452012;1970;153,1;Mais de 5 anos consecutivos sem dados
+57000;1998;86,6;kappa > 0,50;1757003;2004;87,8;kappa > 0,50;2452012;1971;74,4;Mais de 5 anos consecutivos sem dados
+57000;1999;110,9;kappa > 0,50;1757003;2005;107,6;kappa > 0,50;2452012;1972;80;Mais de 5 anos consecutivos sem dados
+57000;2000;107,6;kappa > 0,50;1757003;2006;76,2;kappa > 0,50;2452012;1973;74;Mais de 5 anos consecutivos sem dados
+57000;2004;65;kappa > 0,50;1757003;2007;135;kappa > 0,50;2452012;1974;72;Mais de 5 anos consecutivos sem dados
+57000;2005;95,3;kappa > 0,50;1757003;2008;114,4;kappa > 0,50;2452012;1976;109,2;Mais de 5 anos consecutivos sem dados
+57000;2006;115,7;kappa > 0,50;1757003;2010;56,5;kappa > 0,50;2452012;1977;79;Mais de 5 anos consecutivos sem dados
+57000;2007;90,3;kappa > 0,50;1757003;2011;113;kappa > 0,50;2452012;1978;137;Mais de 5 anos consecutivos sem dados
+57000;2008;107,9;kappa > 0,50;1757003;2017;147,1;kappa > 0,50;2452012;1979;98,8;Mais de 5 anos consecutivos sem dados
+57000;2009;107,1;kappa > 0,50;1757003;2018;110,6;kappa > 0,50;2452012;1980;110,6;Mais de 5 anos consecutivos sem dados
+57000;2010;103,5;kappa > 0,50;1757003;2019;76,6;kappa > 0,50;2452012;1981;108;Mais de 5 anos consecutivos sem dados
+57000;2011;95,3;kappa > 0,50;1757003;2020;120,9;kappa > 0,50;2452012;1982;111,6;Mais de 5 anos consecutivos sem dados
+150003;1985;111,2;kappa > 0,50;1845027;1985;70;kappa > 0,50;2452012;1983;106;Mais de 5 anos consecutivos sem dados
+150003;1987;81,4;kappa > 0,50;1845027;1986;40;kappa > 0,50;2452012;1984;87,8;Mais de 5 anos consecutivos sem dados
+150003;1988;80,6;kappa > 0,50;1845027;1988;40;kappa > 0,50;2452012;1985;115,6;Mais de 5 anos consecutivos sem dados
+150003;1989;75;kappa > 0,50;1845027;1990;69,3;kappa > 0,50;2452012;1986;130,6;Mais de 5 anos consecutivos sem dados
+150003;1990;45;kappa > 0,50;1845027;1991;485,8;kappa > 0,50;2452012;1987;85,4;Mais de 5 anos consecutivos sem dados
+150003;1991;90,8;kappa > 0,50;1845027;1993;90;kappa > 0,50;2452012;1988;112,4;Mais de 5 anos consecutivos sem dados
+150003;1993;10,5;kappa > 0,50;1845027;1994;163;kappa > 0,50;2452012;1989;93,2;Mais de 5 anos consecutivos sem dados
+150003;1995;67,6;kappa > 0,50;1845027;1995;76,4;kappa > 0,50;2452012;1990;103,6;Mais de 5 anos consecutivos sem dados
+150003;1996;59;kappa > 0,50;1845027;1996;132,5;kappa > 0,50;2452012;1991;123;Mais de 5 anos consecutivos sem dados
+150003;1997;61,2;kappa > 0,50;1845027;1997;54,5;kappa > 0,50;2452012;1992;90;Mais de 5 anos consecutivos sem dados
+150003;1998;98,2;kappa > 0,50;1845027;1998;61,3;kappa > 0,50;2452012;1993;116;Mais de 5 anos consecutivos sem dados
+150003;1999;82,5;kappa > 0,50;1845027;1999;107,8;kappa > 0,50;2452012;1994;78,8;Mais de 5 anos consecutivos sem dados
+150003;2000;100;kappa > 0,50;1845027;2000;59,7;kappa > 0,50;2452012;1995;102,6;Mais de 5 anos consecutivos sem dados
+150003;2001;104;kappa > 0,50;1845027;2001;60;kappa > 0,50;2452012;1996;98;Mais de 5 anos consecutivos sem dados
+150003;2002;56,5;kappa > 0,50;1845027;2002;92,4;kappa > 0,50;2452012;1997;156,3;Mais de 5 anos consecutivos sem dados
+150003;2004;85;kappa > 0,50;1845027;2003;58,3;kappa > 0,50;2452012;1998;104,3;Mais de 5 anos consecutivos sem dados
+150003;2005;61,5;kappa > 0,50;1845027;2004;73,1;kappa > 0,50;2452012;1999;87,5;Mais de 5 anos consecutivos sem dados
+150003;2006;57;kappa > 0,50;1845027;2005;66,5;kappa > 0,50;2452012;2000;80,3;Mais de 5 anos consecutivos sem dados
+150003;2007;81,1;kappa > 0,50;1845027;2006;65,3;kappa > 0,50;2452012;2001;103,5;Mais de 5 anos consecutivos sem dados
+150003;2009;87,5;kappa > 0,50;1845027;2007;63,3;kappa > 0,50;2452012;2002;118;Mais de 5 anos consecutivos sem dados
+150003;2010;83,2;kappa > 0,50;1845027;2008;98,1;kappa > 0,50;2452012;2003;76,8;Mais de 5 anos consecutivos sem dados
+150003;2011;76,1;kappa > 0,50;1845027;2010;78,9;kappa > 0,50;2452012;2004;100;Mais de 5 anos consecutivos sem dados
+150003;2012;73,5;kappa > 0,50;1845027;2011;98,5;kappa > 0,50;2452012;2005;132,5;Mais de 5 anos consecutivos sem dados
+150003;2013;96,9;kappa > 0,50;1845027;2013;82,8;kappa > 0,50;2452012;2006;101,7;Mais de 5 anos consecutivos sem dados
+150003;2014;111,6;kappa > 0,50;1845027;2014;61,6;kappa > 0,50;2452012;2011;165,1;Mais de 5 anos consecutivos sem dados
+150003;2016;89,7;kappa > 0,50;1845027;2015;87,7;kappa > 0,50;2452012;2012;111,8;Mais de 5 anos consecutivos sem dados
+150003;2017;75,1;kappa > 0,50;1845027;2016;66,2;kappa > 0,50;2452012;2018;1555,4;Mais de 5 anos consecutivos sem dados
+150003;2018;34,5;kappa > 0,50;1845027;2017;101;kappa > 0,50;2549065;1976;61;kappa > 0,50
+150003;2019;32,5;kappa > 0,50;1845027;2018;54,3;kappa > 0,50;2549065;1977;100,3;kappa > 0,50
+150003;2020;37,2;kappa > 0,50;1845027;2020;87,5;kappa > 0,50;2549065;1978;71;kappa > 0,50
+245008;1986;97;kappa > 0,50;1846002;1967;88,2;kappa > 0,50;2549065;1979;79;kappa > 0,50
+245008;1988;90,5;kappa > 0,50;1846002;1968;83,2;kappa > 0,50;2549065;1980;73;kappa > 0,50
+245008;1991;60;kappa > 0,50;1846002;1969;94,2;kappa > 0,50;2549065;1981;36;kappa > 0,50
+245008;1992;76,7;kappa > 0,50;1846002;1970;104,3;kappa > 0,50;2549065;1982;94;kappa > 0,50
+245008;1993;93,5;kappa > 0,50;1846002;1971;81,2;kappa > 0,50;2549065;1983;24;kappa > 0,50
+245008;1994;72,8;kappa > 0,50;1846002;1972;89,2;kappa > 0,50;2549065;1984;50,3;kappa > 0,50
+245008;1995;80;kappa > 0,50;1846002;1973;78,2;kappa > 0,50;2549065;1985;36,3;kappa > 0,50
+245008;1996;90;kappa > 0,50;1846002;1974;91,2;kappa > 0,50;2549065;1988;75;kappa > 0,50
+245008;1997;73;kappa > 0,50;1846002;1975;92,2;kappa > 0,50;2549065;1990;106,3;kappa > 0,50
+245008;1998;68;kappa > 0,50;1846002;1976;73,2;kappa > 0,50;2549065;1991;100,1;kappa > 0,50
+245008;1999;58,6;kappa > 0,50;1846002;1977;97,2;kappa > 0,50;2549065;1994;97,9;kappa > 0,50
+245008;2000;93,1;kappa > 0,50;1846002;1978;92,2;kappa > 0,50;2549065;1995;100,1;kappa > 0,50
+245008;2001;32,1;kappa > 0,50;1846002;1979;99;kappa > 0,50;2549065;1996;98,3;kappa > 0,50
+245008;2002;85,1;kappa > 0,50;1846002;1980;95,1;kappa > 0,50;2549065;1997;96,8;kappa > 0,50
+245008;2003;82,6;kappa > 0,50;1846002;1981;95,1;kappa > 0,50;2549065;1998;69,5;kappa > 0,50
+245008;2004;88,3;kappa > 0,50;1846002;1982;50,1;kappa > 0,50;2549065;1999;74,4;kappa > 0,50
+245008;2005;82,9;kappa > 0,50;1846002;1983;92,7;kappa > 0,50;2549065;2000;59,6;kappa > 0,50
+245008;2006;86,3;kappa > 0,50;1846002;1984;100,2;kappa > 0,50;2549065;2001;61,9;kappa > 0,50
+245008;2007;86,5;kappa > 0,50;1846002;1985;57,2;kappa > 0,50;2549065;2002;109,9;kappa > 0,50
+245008;2008;75,1;kappa > 0,50;1846002;1986;42,9;kappa > 0,50;2549065;2003;68,6;kappa > 0,50
+245008;2010;110,3;kappa > 0,50;1846002;1987;37,9;kappa > 0,50;2549065;2004;68,2;kappa > 0,50
+245008;2011;65,3;kappa > 0,50;1846002;1989;80,7;kappa > 0,50;2549065;2005;91,5;kappa > 0,50
+245008;2012;93,6;kappa > 0,50;1846002;1990;19,2;kappa > 0,50;2549065;2006;84,8;kappa > 0,50
+245008;2014;110,5;kappa > 0,50;1846002;1991;52;kappa > 0,50;2549065;2007;82,2;kappa > 0,50
+245008;2015;49,5;kappa > 0,50;1846002;1992;38,5;kappa > 0,50;2549065;2008;88;kappa > 0,50
+245008;2016;92,3;kappa > 0,50;1846002;1994;67,5;kappa > 0,50;2549065;2009;77,5;kappa > 0,50
+245008;2017;110,1;kappa > 0,50;1846002;1995;56,6;kappa > 0,50;2549065;2011;84,4;kappa > 0,50
+268000;1982;93;kappa > 0,50;1846002;1996;101,5;kappa > 0,50;2549065;2012;97,2;kappa > 0,50
+268000;1983;41;kappa > 0,50;1846002;1997;67,9;kappa > 0,50;2549065;2014;120;kappa > 0,50
+268000;1984;55;kappa > 0,50;1846002;1998;97;kappa > 0,50;2549065;2018;71,8;kappa > 0,50
+268000;1985;50;kappa > 0,50;1846002;1999;91,1;kappa > 0,50;2550017;1974;58,7;kappa > 0,50
+268000;1987;50,6;kappa > 0,50;1846002;2000;72,1;kappa > 0,50;2550017;1976;88;kappa > 0,50
+268000;1988;37;kappa > 0,50;1846002;2001;103,8;kappa > 0,50;2550017;1977;77,4;kappa > 0,50
+268000;1989;37;kappa > 0,50;1846002;2002;89,4;kappa > 0,50;2550017;1978;113,2;kappa > 0,50
+268000;1990;86,4;kappa > 0,50;1846002;2003;74,4;kappa > 0,50;2550017;1979;57;kappa > 0,50
+268000;1992;117,2;kappa > 0,50;1846002;2004;59,6;kappa > 0,50;2550017;1980;120,6;kappa > 0,50
+268000;1998;80,4;kappa > 0,50;1846002;2005;84,6;kappa > 0,50;2550017;1981;54;kappa > 0,50
+268000;1999;90,7;kappa > 0,50;1846002;2006;63,1;kappa > 0,50;2550017;1982;106,2;kappa > 0,50
+268000;2000;80,4;kappa > 0,50;1846002;2007;133,5;kappa > 0,50;2550017;1983;86,4;kappa > 0,50
+268000;2001;90,5;kappa > 0,50;1846002;2008;93,7;kappa > 0,50;2550017;1984;63,2;kappa > 0,50
+268000;2002;90,2;kappa > 0,50;1846002;2009;75,5;kappa > 0,50;2550017;1985;66;kappa > 0,50
+268000;2003;80,3;kappa > 0,50;1846002;2010;82,5;kappa > 0,50;2550017;1986;75;kappa > 0,50
+268000;2004;90,2;kappa > 0,50;1846002;2011;108;kappa > 0,50;2550017;1987;65,2;kappa > 0,50
+268000;2006;80,1;kappa > 0,50;1846002;2017;77,1;kappa > 0,50;2550017;1988;87,6;kappa > 0,50
+268000;2007;90,4;kappa > 0,50;1846002;2018;70;kappa > 0,50;2550017;1989;328,40002;kappa > 0,50
+268000;2009;90,2;kappa > 0,50;1846002;2019;80;kappa > 0,50;2550017;1990;83,9;kappa > 0,50
+268000;2010;110,5;kappa > 0,50;1846002;2021;110;kappa > 0,50;2550017;1991;680;kappa > 0,50
+268000;2011;90,4;kappa > 0,50;1851000;1973;87,4;Mais de 5 anos consecutivos sem dados;2550017;1992;90,4;kappa > 0,50
+268000;2012;90,3;kappa > 0,50;1851000;1974;92,4;Mais de 5 anos consecutivos sem dados;2550017;1993;63,1;kappa > 0,50
+268000;2014;94,4;kappa > 0,50;1851000;1975;80;Mais de 5 anos consecutivos sem dados;2550017;1994;88,6;kappa > 0,50
+268000;2021;93,4;kappa > 0,50;1851000;1976;80,9;Mais de 5 anos consecutivos sem dados;2550017;1995;67,8;kappa > 0,50
+338038;1998;94,5;kappa > 0,50;1851000;1977;75;Mais de 5 anos consecutivos sem dados;2550017;1996;80,6;kappa > 0,50
+338038;1999;117;kappa > 0,50;1851000;1978;64,6;Mais de 5 anos consecutivos sem dados;2550017;1998;118;kappa > 0,50
+338038;2000;101;kappa > 0,50;1851000;1979;119,3;Mais de 5 anos consecutivos sem dados;2550017;1999;57,9;kappa > 0,50
+338038;2001;98;kappa > 0,50;1851000;1980;115;Mais de 5 anos consecutivos sem dados;2550017;2000;85,4;kappa > 0,50
+338038;2002;127;kappa > 0,50;1851000;1981;110;Mais de 5 anos consecutivos sem dados;2550017;2002;106,4;kappa > 0,50
+338038;2003;141,2;kappa > 0,50;1851000;1982;88;Mais de 5 anos consecutivos sem dados;2550017;2003;80;kappa > 0,50
+338038;2004;101;kappa > 0,50;1851000;1983;52;Mais de 5 anos consecutivos sem dados;2550017;2004;65,4;kappa > 0,50
+338038;2005;87,6;kappa > 0,50;1851000;1984;69,2;Mais de 5 anos consecutivos sem dados;2550017;2005;65,2;kappa > 0,50
+338038;2006;138;kappa > 0,50;1851000;1995;989,6;Mais de 5 anos consecutivos sem dados;2550017;2006;75,6;kappa > 0,50
+338038;2008;108;kappa > 0,50;1851000;1996;63,9;Mais de 5 anos consecutivos sem dados;2550017;2007;54,4;kappa > 0,50
+338038;2009;65;kappa > 0,50;1851000;1998;74,6;Mais de 5 anos consecutivos sem dados;2550017;2008;77,399994;kappa > 0,50
+338038;2010;137;kappa > 0,50;1851000;1999;123,1;Mais de 5 anos consecutivos sem dados;2550017;2012;94,9;kappa > 0,50
+338038;2011;87;kappa > 0,50;1851000;2000;94,4;Mais de 5 anos consecutivos sem dados;2550017;2014;78,9;kappa > 0,50
+338038;2012;62;kappa > 0,50;1851000;2001;120,9;Mais de 5 anos consecutivos sem dados;2550017;2018;49,2;kappa > 0,50
+338038;2013;124;kappa > 0,50;1851000;2003;85,7;Mais de 5 anos consecutivos sem dados;2551047;1986;97;kappa > 0,50
+338038;2015;132,6;kappa > 0,50;1851000;2004;75,5;Mais de 5 anos consecutivos sem dados;2551047;1987;67,9;kappa > 0,50
+338038;2016;110;kappa > 0,50;1851000;2005;100;Mais de 5 anos consecutivos sem dados;2551047;1988;75,2;kappa > 0,50
+338038;2017;134;kappa > 0,50;1851000;2007;128,7;Mais de 5 anos consecutivos sem dados;2551047;1989;77,6;kappa > 0,50
+338038;2018;148,4;kappa > 0,50;1851000;2008;143,9;Mais de 5 anos consecutivos sem dados;2551047;1990;77,9;kappa > 0,50
+338038;2019;130,2;kappa > 0,50;1851000;2009;96,1;Mais de 5 anos consecutivos sem dados;2551047;1991;231,7;kappa > 0,50
+338038;2020;115;kappa > 0,50;1851000;2010;165;Mais de 5 anos consecutivos sem dados;2551047;1992;92,9;kappa > 0,50
+338038;2021;113;kappa > 0,50;1851000;2011;85;Mais de 5 anos consecutivos sem dados;2551047;1993;68,9;kappa > 0,50
+340086;1997;55;kappa > 0,50;1851000;2012;86;Mais de 5 anos consecutivos sem dados;2551047;1994;69,3;kappa > 0,50
+340086;1999;53;kappa > 0,50;1851000;2013;81;Mais de 5 anos consecutivos sem dados;2551047;1996;100,7;kappa > 0,50
+340086;2000;87;kappa > 0,50;1851000;2014;62,1;Mais de 5 anos consecutivos sem dados;2551047;1997;95,5;kappa > 0,50
+340086;2001;250;kappa > 0,50;1851000;2016;100;Mais de 5 anos consecutivos sem dados;2551047;1998;88,4;kappa > 0,50
+340086;2002;130;kappa > 0,50;1851000;2017;114;Mais de 5 anos consecutivos sem dados;2551047;1999;55,5;kappa > 0,50
+340086;2003;50;kappa > 0,50;1851000;2018;82,2;Mais de 5 anos consecutivos sem dados;2551047;2000;74,2;kappa > 0,50
+340086;2004;50;kappa > 0,50;1851000;2020;78,1;Mais de 5 anos consecutivos sem dados;2551047;2002;72,3;kappa > 0,50
+340086;2005;50,2;kappa > 0,50;1954002;1967;116;Mais de 5 anos consecutivos sem dados;2551047;2003;80,5;kappa > 0,50
+340086;2006;48,8;kappa > 0,50;1954002;1968;114,6;Mais de 5 anos consecutivos sem dados;2551047;2004;112;kappa > 0,50
+340086;2008;80,7;kappa > 0,50;1954002;1969;87;Mais de 5 anos consecutivos sem dados;2551047;2005;95,5;kappa > 0,50
+340086;2013;100;kappa > 0,50;1954002;1970;84,8;Mais de 5 anos consecutivos sem dados;2551047;2006;78,6;kappa > 0,50
+340086;2014;71;kappa > 0,50;1954002;1971;70,6;Mais de 5 anos consecutivos sem dados;2551047;2007;76,8;kappa > 0,50
+340086;2017;58;kappa > 0,50;1954002;1976;979,2;Mais de 5 anos consecutivos sem dados;2551047;2009;88;kappa > 0,50
+340086;2018;55;kappa > 0,50;1954002;1977;88,8;Mais de 5 anos consecutivos sem dados;2551047;2010;71,4;kappa > 0,50
+340086;2019;125;kappa > 0,50;1954002;1978;94;Mais de 5 anos consecutivos sem dados;2551047;2011;105,3;kappa > 0,50
+349001;1983;108;kappa > 0,50;1954002;1979;83,8;Mais de 5 anos consecutivos sem dados;2551047;2012;136,8;kappa > 0,50
+349001;1984;124;kappa > 0,50;1954002;1980;94,8;Mais de 5 anos consecutivos sem dados;2551047;2013;328,6;kappa > 0,50
+349001;1986;79,1;kappa > 0,50;1954002;1981;69,2;Mais de 5 anos consecutivos sem dados;2551047;2014;71,4;kappa > 0,50
+349001;1987;113,8;kappa > 0,50;1954002;1982;65,8;Mais de 5 anos consecutivos sem dados;2551047;2018;90,7;kappa > 0,50
+349001;1989;143,6;kappa > 0,50;1954002;1992;59,2;Mais de 5 anos consecutivos sem dados;2552047;1976;86,3;Mais de 5 anos consecutivos sem dados
+349001;1991;116;kappa > 0,50;1954002;1993;62,5;Mais de 5 anos consecutivos sem dados;2552047;1977;99,4;Mais de 5 anos consecutivos sem dados
+349001;1992;68,7;kappa > 0,50;1954002;1994;75;Mais de 5 anos consecutivos sem dados;2552047;1978;83,2;Mais de 5 anos consecutivos sem dados
+349001;1993;144,6;kappa > 0,50;1954002;1995;82,3;Mais de 5 anos consecutivos sem dados;2552047;1979;83,2;Mais de 5 anos consecutivos sem dados
+349001;1994;90;kappa > 0,50;1954002;1996;73,2;Mais de 5 anos consecutivos sem dados;2552047;1980;88,3;Mais de 5 anos consecutivos sem dados
+349001;1996;76;kappa > 0,50;1954002;1997;123,7;Mais de 5 anos consecutivos sem dados;2552047;1981;125,2;Mais de 5 anos consecutivos sem dados
+349001;1998;134,7;kappa > 0,50;1954002;1998;64,7;Mais de 5 anos consecutivos sem dados;2552047;1982;90;Mais de 5 anos consecutivos sem dados
+349001;1999;133,3;kappa > 0,50;1954002;1999;88,2;Mais de 5 anos consecutivos sem dados;2552047;1983;121,4;Mais de 5 anos consecutivos sem dados
+349001;2003;116,3;kappa > 0,50;1954002;2000;83;Mais de 5 anos consecutivos sem dados;2552047;1984;53,2;Mais de 5 anos consecutivos sem dados
+349001;2004;101,4;kappa > 0,50;1954002;2001;100;Mais de 5 anos consecutivos sem dados;2552047;1985;100,4;Mais de 5 anos consecutivos sem dados
+349001;2005;64;kappa > 0,50;1954002;2002;90;Mais de 5 anos consecutivos sem dados;2552047;1986;115;Mais de 5 anos consecutivos sem dados
+349001;2009;39,2;kappa > 0,50;1954002;2003;63;Mais de 5 anos consecutivos sem dados;2552047;1987;92,5;Mais de 5 anos consecutivos sem dados
+349001;2010;33,6;kappa > 0,50;1954002;2004;72;Mais de 5 anos consecutivos sem dados;2552047;1988;88;Mais de 5 anos consecutivos sem dados
+437016;1998;88,4;kappa > 0,50;1954002;2005;56;Mais de 5 anos consecutivos sem dados;2552047;1989;107;Mais de 5 anos consecutivos sem dados
+437016;1999;85;kappa > 0,50;1954002;2006;56,5;Mais de 5 anos consecutivos sem dados;2552047;1991;165,6;Mais de 5 anos consecutivos sem dados
+437016;2001;95;kappa > 0,50;1954002;2009;130,2;Mais de 5 anos consecutivos sem dados;2552047;1992;108,3;Mais de 5 anos consecutivos sem dados
+437016;2002;110;kappa > 0,50;1954002;2011;91,3;Mais de 5 anos consecutivos sem dados;2552047;1993;139,5;Mais de 5 anos consecutivos sem dados
+437016;2003;91;kappa > 0,50;1954002;2014;78,8;Mais de 5 anos consecutivos sem dados;2552047;1994;145,3;Mais de 5 anos consecutivos sem dados
+437016;2004;56;kappa > 0,50;1954002;2016;63,5;Mais de 5 anos consecutivos sem dados;2552047;1995;96,7;Mais de 5 anos consecutivos sem dados
+437016;2005;85;kappa > 0,50;1954002;2017;97,1;Mais de 5 anos consecutivos sem dados;2552047;1996;140,1;Mais de 5 anos consecutivos sem dados
+437016;2006;80;kappa > 0,50;1954002;2018;86;Mais de 5 anos consecutivos sem dados;2552047;1997;125,5;Mais de 5 anos consecutivos sem dados
+437016;2007;111,6;kappa > 0,50;1954002;2019;93,5;Mais de 5 anos consecutivos sem dados;2552047;1998;119,3;Mais de 5 anos consecutivos sem dados
+437016;2008;95;kappa > 0,50;1954002;2020;77,7;Mais de 5 anos consecutivos sem dados;2552047;1999;181,9;Mais de 5 anos consecutivos sem dados
+437016;2014;87,2;kappa > 0,50;1954002;2021;68,4;Mais de 5 anos consecutivos sem dados;2552047;2000;76,9;Mais de 5 anos consecutivos sem dados
+437016;2015;41;kappa > 0,50;2147001;1943;76,8;Estação não otimizada;2552047;2001;59,9;Mais de 5 anos consecutivos sem dados
+437016;2017;81;kappa > 0,50;2147001;1944;72,2;Estação não otimizada;2552047;2002;81,3;Mais de 5 anos consecutivos sem dados
+437016;2018;44,2;kappa > 0,50;2147001;1947;6,4;Estação não otimizada;2552047;2003;169,3;Mais de 5 anos consecutivos sem dados
+437016;2019;107,8;kappa > 0,50;2147001;1949;10,6;Estação não otimizada;2552047;2004;88,1;Mais de 5 anos consecutivos sem dados
+437016;2020;30;kappa > 0,50;2147001;1950;5,4;Estação não otimizada;2552047;2005;69,4;Mais de 5 anos consecutivos sem dados
+437016;2021;106,6;kappa > 0,50;2147001;1951;7,3;Estação não otimizada;2552047;2006;120,6;Mais de 5 anos consecutivos sem dados
+438071;1990;74;kappa > 0,50;2147001;1955;72,2;Estação não otimizada;2552047;2007;63;Mais de 5 anos consecutivos sem dados
+438071;1991;85,5;kappa > 0,50;2147001;1956;69,8;Estação não otimizada;2552047;2008;93,4;Mais de 5 anos consecutivos sem dados
+438071;2008;82;kappa > 0,50;2147001;1957;72,3;Estação não otimizada;2552047;2009;94,1;Mais de 5 anos consecutivos sem dados
+438071;2009;43;kappa > 0,50;2147001;1958;88;Estação não otimizada;2552047;2010;94;Mais de 5 anos consecutivos sem dados
+438071;2010;60;kappa > 0,50;2147001;1959;39,7;Estação não otimizada;2552047;2011;116,3;Mais de 5 anos consecutivos sem dados
+438071;2011;109;kappa > 0,50;2147001;1960;25,4;Estação não otimizada;2552047;2012;98;Mais de 5 anos consecutivos sem dados
+438071;2012;50;kappa > 0,50;2147001;1961;12,9;Estação não otimizada;2552047;2018;1999,8;Mais de 5 anos consecutivos sem dados
+438071;2013;36;kappa > 0,50;2147001;1968;62,2;Estação não otimizada;2553007;1965;110;Mais de 5 anos consecutivos sem dados
+438071;2014;77;kappa > 0,50;2147001;1969;90;Estação não otimizada;2553007;1967;75;Mais de 5 anos consecutivos sem dados
+438071;2015;85;kappa > 0,50;2147001;1970;40,5;Estação não otimizada;2553007;1968;100;Mais de 5 anos consecutivos sem dados
+438071;2016;60;kappa > 0,50;2147001;1971;114,3;Estação não otimizada;2553007;1970;91;Mais de 5 anos consecutivos sem dados
+438071;2017;85;kappa > 0,50;2147001;1972;91,1;Estação não otimizada;2553007;1972;99;Mais de 5 anos consecutivos sem dados
+438071;2018;91;kappa > 0,50;2147001;1973;98,1;Estação não otimizada;2553007;1973;95;Mais de 5 anos consecutivos sem dados
+438071;2019;73;kappa > 0,50;2147001;1974;88,4;Estação não otimizada;2553007;1974;107,5;Mais de 5 anos consecutivos sem dados
+438071;2020;80;kappa > 0,50;2147001;1975;79,3;Estação não otimizada;2553007;1975;111,2;Mais de 5 anos consecutivos sem dados
+438071;2021;77;kappa > 0,50;2147001;1976;98,2;Estação não otimizada;2553007;1977;114;Mais de 5 anos consecutivos sem dados
+669001;1984;99;kappa > 0,50;2147001;1977;92,6;Estação não otimizada;2553007;1978;78,2;Mais de 5 anos consecutivos sem dados
+669001;1985;76,8;kappa > 0,50;2147001;1978;66,3;Estação não otimizada;2553007;1979;94,2;Mais de 5 anos consecutivos sem dados
+669001;1986;100;kappa > 0,50;2147001;1979;97,2;Estação não otimizada;2553007;1980;150;Mais de 5 anos consecutivos sem dados
+669001;1987;85,4;kappa > 0,50;2147001;1980;71,3;Estação não otimizada;2553007;1981;67,4;Mais de 5 anos consecutivos sem dados
+669001;1988;88,6;kappa > 0,50;2147001;1981;80,7;Estação não otimizada;2553007;1982;112,2;Mais de 5 anos consecutivos sem dados
+669001;1989;94,6;kappa > 0,50;2147001;1984;106,5;Estação não otimizada;2553007;1983;130,6;Mais de 5 anos consecutivos sem dados
+669001;1990;50;kappa > 0,50;2147001;1989;196,6;Estação não otimizada;2553007;1984;65;Mais de 5 anos consecutivos sem dados
+669001;1991;54,8;kappa > 0,50;2147001;1990;81;Estação não otimizada;2553007;1985;88,2;Mais de 5 anos consecutivos sem dados
+669001;1992;64,4;kappa > 0,50;2147001;1991;106,1;Estação não otimizada;2553007;1986;95,6;Mais de 5 anos consecutivos sem dados
+669001;1995;100;kappa > 0,50;2147001;1992;73,5;Estação não otimizada;2553007;1987;92,4;Mais de 5 anos consecutivos sem dados
+669001;1996;95;kappa > 0,50;2147001;1993;66,5;Estação não otimizada;2553007;1988;88,1;Mais de 5 anos consecutivos sem dados
+669001;1997;100,1;kappa > 0,50;2147001;1994;106,4;Estação não otimizada;2553007;1992;127;Mais de 5 anos consecutivos sem dados
+669001;1998;140;kappa > 0,50;2147001;1995;104,1;Estação não otimizada;2553007;1993;121,3;Mais de 5 anos consecutivos sem dados
+669001;1999;80,7;kappa > 0,50;2147001;1996;91;Estação não otimizada;2553007;1994;137,2;Mais de 5 anos consecutivos sem dados
+669001;2000;99,6;kappa > 0,50;2147001;1997;64;Estação não otimizada;2553007;1995;98,9;Mais de 5 anos consecutivos sem dados
+669001;2001;100,6;kappa > 0,50;2147001;1998;52,3;Estação não otimizada;2553007;1997;169,9;Mais de 5 anos consecutivos sem dados
+669001;2002;111,7;kappa > 0,50;2147001;1999;80;Estação não otimizada;2553007;1998;100;Mais de 5 anos consecutivos sem dados
+669001;2003;111,5;kappa > 0,50;2147001;2000;57,5;Estação não otimizada;2553007;1999;74,9;Mais de 5 anos consecutivos sem dados
+669001;2004;100,6;kappa > 0,50;2147001;2001;87,4;Estação não otimizada;2553007;2000;79,9;Mais de 5 anos consecutivos sem dados
+669001;2005;100;kappa > 0,50;2147001;2002;92;Estação não otimizada;2553007;2001;101,6;Mais de 5 anos consecutivos sem dados
+669001;2008;120;kappa > 0,50;2147001;2003;78,5;Estação não otimizada;2553007;2002;74,3;Mais de 5 anos consecutivos sem dados
+669001;2010;98,7;kappa > 0,50;2147001;2004;103,1;Estação não otimizada;2553007;2003;98,8;Mais de 5 anos consecutivos sem dados
+736070;1994;64;kappa > 0,50;2147001;2005;71,4;Estação não otimizada;2553007;2004;137,5;Mais de 5 anos consecutivos sem dados
+736070;1995;40,6;kappa > 0,50;2147001;2007;73,3;Estação não otimizada;2553007;2005;138,3;Mais de 5 anos consecutivos sem dados
+736070;1996;42,2;kappa > 0,50;2147001;2011;77;Estação não otimizada;2553007;2006;110,6;Mais de 5 anos consecutivos sem dados
+736070;1997;78,6;kappa > 0,50;2147166;1982;86,9;kappa > 0,50;2553007;2007;92,4;Mais de 5 anos consecutivos sem dados
+736070;1998;90;kappa > 0,50;2147166;1983;91,3;kappa > 0,50;2553007;2009;100;Mais de 5 anos consecutivos sem dados
+736070;1999;100;kappa > 0,50;2147166;1984;89,2;kappa > 0,50;2553007;2018;1999,8;Mais de 5 anos consecutivos sem dados
+736070;2000;91,4;kappa > 0,50;2147166;1985;69,5;kappa > 0,50;2553056;1992;133,3;kappa > 0,50
+736070;2001;74,6;kappa > 0,50;2147166;1987;99,7;kappa > 0,50;2553056;1993;102,8;kappa > 0,50
+736070;2002;99,6;kappa > 0,50;2147166;1988;65,9;kappa > 0,50;2553056;1994;59,8;kappa > 0,50
+736070;2003;58;kappa > 0,50;2147166;1989;93,1;kappa > 0,50;2553056;1995;87,5;kappa > 0,50
+736070;2004;84;kappa > 0,50;2147166;1990;82;kappa > 0,50;2553056;1996;120,5;kappa > 0,50
+736070;2005;117,4;kappa > 0,50;2147166;1991;51,7;kappa > 0,50;2553056;1997;111,1;kappa > 0,50
+736070;2006;46,3;kappa > 0,50;2147166;1992;99,6;kappa > 0,50;2553056;1998;92;kappa > 0,50
+736070;2007;80,9;kappa > 0,50;2147166;1993;58,8;kappa > 0,50;2553056;2002;78;kappa > 0,50
+736070;2008;78,1;kappa > 0,50;2147166;1996;91,5;kappa > 0,50;2553056;2003;108,8;kappa > 0,50
+736070;2009;87,3;kappa > 0,50;2147166;1997;91,3;kappa > 0,50;2553056;2004;107,2;kappa > 0,50
+736070;2010;84;kappa > 0,50;2147166;1998;93,1;kappa > 0,50;2553056;2005;94,7;kappa > 0,50
+736070;2011;32,5;kappa > 0,50;2147166;1999;65,9;kappa > 0,50;2553056;2006;110,299995;kappa > 0,50
+736070;2012;45,3;kappa > 0,50;2147166;2000;61,4;kappa > 0,50;2553056;2007;66,9;kappa > 0,50
+736070;2013;71,6;kappa > 0,50;2147166;2001;101,4;kappa > 0,50;2553056;2008;97,6;kappa > 0,50
+736070;2014;38,5;kappa > 0,50;2147166;2002;74,1;kappa > 0,50;2553056;2010;78,5;kappa > 0,50
+736070;2015;89;kappa > 0,50;2147166;2003;94,4;kappa > 0,50;2553056;2011;124,2;kappa > 0,50
+736070;2016;27,7;kappa > 0,50;2147166;2004;96,2;kappa > 0,50;2553056;2012;114,4;kappa > 0,50
+736070;2017;82,5;kappa > 0,50;2147166;2005;73,4;kappa > 0,50;2553056;2014;107;kappa > 0,50
+736070;2018;89,4;kappa > 0,50;2147166;2011;43,5;kappa > 0,50;2650024;1986;95,2;kappa > 0,50
+771000;1985;89,6;kappa > 0,50;2147166;2012;105,3;kappa > 0,50;2650024;1987;62,8;kappa > 0,50
+771000;1986;71,7;kappa > 0,50;2147166;2013;75,6;kappa > 0,50;2650024;1988;80;kappa > 0,50
+771000;1988;60,3;kappa > 0,50;2147166;2016;86,3;kappa > 0,50;2650024;1989;58,5;kappa > 0,50
+771000;1989;63,6;kappa > 0,50;2147166;2017;49,2;kappa > 0,50;2650024;1990;88,8;kappa > 0,50
+771000;1990;146,2;kappa > 0,50;2246057;1975;78,8;kappa > 0,50;2650024;1991;211,6;kappa > 0,50
+771000;1991;100,3;kappa > 0,50;2246057;1976;83,2;kappa > 0,50;2650024;1992;90,5;kappa > 0,50
+771000;1992;48,3;kappa > 0,50;2246057;1977;54,6;kappa > 0,50;2650024;1993;66,3;kappa > 0,50
+771000;1993;54,2;kappa > 0,50;2246057;1978;72,8;kappa > 0,50;2650024;1994;69,6;kappa > 0,50
+771000;1994;57,3;kappa > 0,50;2246057;1979;61,8;kappa > 0,50;2650024;1995;112,2;kappa > 0,50
+771000;1995;41,3;kappa > 0,50;2246057;1980;76,2;kappa > 0,50;2650024;1996;86,9;kappa > 0,50
+771000;1996;57,2;kappa > 0,50;2246057;1981;110,6;kappa > 0,50;2650024;1997;151,9;kappa > 0,50
+771000;1997;57,2;kappa > 0,50;2246057;1982;69,8;kappa > 0,50;2650024;1998;90,7;kappa > 0,50
+771000;1998;63,2;kappa > 0,50;2246057;1983;74,2;kappa > 0,50;2650024;1999;74,1;kappa > 0,50
+771000;1999;53,4;kappa > 0,50;2246057;1984;53,8;kappa > 0,50;2650024;2000;63,5;kappa > 0,50
+771000;2000;52,4;kappa > 0,50;2246057;1985;72,8;kappa > 0,50;2650024;2001;101,7;kappa > 0,50
+771000;2001;62,7;kappa > 0,50;2246057;1986;57,2;kappa > 0,50;2650024;2002;367;kappa > 0,50
+771000;2002;475,3;kappa > 0,50;2246057;1987;70,4;kappa > 0,50;2650024;2003;72,4;kappa > 0,50
+771000;2004;61,4;kappa > 0,50;2246057;1989;52,2;kappa > 0,50;2650024;2004;71,3;kappa > 0,50
+771000;2005;53,1;kappa > 0,50;2246057;1990;66,4;kappa > 0,50;2650024;2005;61;kappa > 0,50
+771000;2006;64,2;kappa > 0,50;2246057;1992;96,8;kappa > 0,50;2650024;2006;65,8;kappa > 0,50
+771000;2007;53,6;kappa > 0,50;2246057;1993;73,8;kappa > 0,50;2650024;2007;68;kappa > 0,50
+771000;2008;56,3;kappa > 0,50;2246057;1994;80,6;kappa > 0,50;2650024;2008;54,7;kappa > 0,50
+771000;2009;57,6;kappa > 0,50;2246057;1995;82,4;kappa > 0,50;2650024;2010;61;kappa > 0,50
+771000;2010;54,6;kappa > 0,50;2246057;1996;52,6;kappa > 0,50;2650024;2011;164,7;kappa > 0,50
+771000;2015;69,4;kappa > 0,50;2246057;1997;58,4;kappa > 0,50;2650024;2012;83,7;kappa > 0,50
+771000;2016;85,2;kappa > 0,50;2246057;1998;70,6;kappa > 0,50;2650024;2014;62,6;kappa > 0,50
+771000;2018;76,4;kappa > 0,50;2246057;1999;60,8;kappa > 0,50;2651013;1956;62,8;Mais de 5 anos consecutivos sem dados
+771000;2019;64,6;kappa > 0,50;2246057;2000;60,6;kappa > 0,50;2651013;1957;109,6;Mais de 5 anos consecutivos sem dados
+771000;2021;62,3;kappa > 0,50;2246057;2001;90,6;kappa > 0,50;2651013;1958;71,8;Mais de 5 anos consecutivos sem dados
+937040;2004;40,5;kappa > 0,50;2246057;2002;76,4;kappa > 0,50;2651013;1959;68,8;Mais de 5 anos consecutivos sem dados
+937040;2005;47,3;kappa > 0,50;2246057;2003;53,4;kappa > 0,50;2651013;1960;74,8;Mais de 5 anos consecutivos sem dados
+937040;2006;75,3;kappa > 0,50;2246057;2004;74,8;kappa > 0,50;2651013;1961;78,8;Mais de 5 anos consecutivos sem dados
+937040;2007;34;kappa > 0,50;2246057;2010;607,2;kappa > 0,50;2651013;1963;55,2;Mais de 5 anos consecutivos sem dados
+937040;2008;68,3;kappa > 0,50;2246057;2011;46,5;kappa > 0,50;2651013;1964;96,7;Mais de 5 anos consecutivos sem dados
+937040;2009;100;kappa > 0,50;2246057;2014;54,5;kappa > 0,50;2651013;1965;74,2;Mais de 5 anos consecutivos sem dados
+937040;2010;220,1;kappa > 0,50;2246057;2016;55,7;kappa > 0,50;2651013;1966;77,6;Mais de 5 anos consecutivos sem dados
+937040;2011;60,3;kappa > 0,50;2246057;2021;53,7;kappa > 0,50;2651013;1967;94,4;Mais de 5 anos consecutivos sem dados
+937040;2012;43,5;kappa > 0,50;2247182;1977;78,4;kappa > 0,50;2651013;1968;64,4;Mais de 5 anos consecutivos sem dados
+937040;2013;36,2;kappa > 0,50;2247182;1978;68,9;kappa > 0,50;2651013;1969;83,6;Mais de 5 anos consecutivos sem dados
+937040;2014;38,1;kappa > 0,50;2247182;1979;78,6;kappa > 0,50;2651013;1970;79,2;Mais de 5 anos consecutivos sem dados
+937040;2015;42,7;kappa > 0,50;2247182;1980;74,3;kappa > 0,50;2651013;1971;94,8;Mais de 5 anos consecutivos sem dados
+937040;2016;46,6;kappa > 0,50;2247182;1982;121,2;kappa > 0,50;2651013;1972;93,8;Mais de 5 anos consecutivos sem dados
+937040;2017;36,3;kappa > 0,50;2247182;1983;83,2;kappa > 0,50;2651013;1973;77,2;Mais de 5 anos consecutivos sem dados
+937040;2018;65,9;kappa > 0,50;2247182;1984;60,1;kappa > 0,50;2651013;1974;68;Mais de 5 anos consecutivos sem dados
+937040;2021;58,7;kappa > 0,50;2247182;1985;75,4;kappa > 0,50;2651013;1975;66,4;Mais de 5 anos consecutivos sem dados
+950001;1982;75,7;kappa > 0,50;2247182;1986;79,8;kappa > 0,50;2651013;1976;70;Mais de 5 anos consecutivos sem dados
+950001;1983;72,4;kappa > 0,50;2247182;1989;90,1;kappa > 0,50;2651013;1977;67;Mais de 5 anos consecutivos sem dados
+950001;1984;155,3;kappa > 0,50;2247182;1990;70;kappa > 0,50;2651013;1978;70,2;Mais de 5 anos consecutivos sem dados
+950001;1985;79,9;kappa > 0,50;2247182;1991;91,2;kappa > 0,50;2651013;1979;103,8;Mais de 5 anos consecutivos sem dados
+950001;1986;75,9;kappa > 0,50;2247182;1992;53;kappa > 0,50;2651013;1981;59;Mais de 5 anos consecutivos sem dados
+950001;1989;83,2;kappa > 0,50;2247182;1993;82,4;kappa > 0,50;2651013;1982;88,6;Mais de 5 anos consecutivos sem dados
+950001;1990;50,7;kappa > 0,50;2247182;1994;69,6;kappa > 0,50;2651013;1983;164,4;Mais de 5 anos consecutivos sem dados
+950001;1993;70,7;kappa > 0,50;2247182;1995;82,1;kappa > 0,50;2651013;1984;126,4;Mais de 5 anos consecutivos sem dados
+950001;1994;90,3;kappa > 0,50;2247182;1996;83,8;kappa > 0,50;2651013;1985;67,6;Mais de 5 anos consecutivos sem dados
+950001;1995;7,8;kappa > 0,50;2247182;1997;82,7;kappa > 0,50;2651013;1986;64,2;Mais de 5 anos consecutivos sem dados
+950001;1996;8;kappa > 0,50;2247182;1998;126,6;kappa > 0,50;2651013;1987;164,4;Mais de 5 anos consecutivos sem dados
+950001;1997;46,1;kappa > 0,50;2247182;1999;65,1;kappa > 0,50;2651013;1988;82;Mais de 5 anos consecutivos sem dados
+950001;1998;68,7;kappa > 0,50;2247182;2000;99,2;kappa > 0,50;2651013;1989;85,4;Mais de 5 anos consecutivos sem dados
+950001;1999;96;kappa > 0,50;2247182;2001;93,6;kappa > 0,50;2651013;1991;74,7;Mais de 5 anos consecutivos sem dados
+950001;2000;84;kappa > 0,50;2247182;2002;183,4;kappa > 0,50;2651013;1992;148,6;Mais de 5 anos consecutivos sem dados
+950001;2001;72,1;kappa > 0,50;2247182;2003;91,4;kappa > 0,50;2651013;1993;113,2;Mais de 5 anos consecutivos sem dados
+950001;2002;75,5;kappa > 0,50;2247182;2004;70,5;kappa > 0,50;2651013;1994;94,1;Mais de 5 anos consecutivos sem dados
+950001;2003;76,2;kappa > 0,50;2247182;2005;63,8;kappa > 0,50;2651013;1995;87,7;Mais de 5 anos consecutivos sem dados
+950001;2004;79,5;kappa > 0,50;2247182;2006;70,2;kappa > 0,50;2651013;1996;77;Mais de 5 anos consecutivos sem dados
+950001;2005;93,1;kappa > 0,50;2247182;2011;80,9;kappa > 0,50;2651013;1997;100,8;Mais de 5 anos consecutivos sem dados
+950001;2008;76,3;kappa > 0,50;2247182;2012;145,5;kappa > 0,50;2651013;1998;73;Mais de 5 anos consecutivos sem dados
+950001;2009;88,5;kappa > 0,50;2247182;2013;353;kappa > 0,50;2651013;1999;131,2;Mais de 5 anos consecutivos sem dados
+950001;2012;84,7;kappa > 0,50;2247182;2015;92,1;kappa > 0,50;2651013;2000;95,2;Mais de 5 anos consecutivos sem dados
+950001;2013;101,7;kappa > 0,50;2247182;2017;60,4;kappa > 0,50;2651013;2001;101,2;Mais de 5 anos consecutivos sem dados
+950001;2014;96,2;kappa > 0,50;2247182;2018;73,5;kappa > 0,50;2651013;2002;95,9;Mais de 5 anos consecutivos sem dados
+950001;2015;76,1;kappa > 0,50;2247196;1979;78,4;kappa > 0,50;2651013;2003;87,5;Mais de 5 anos consecutivos sem dados
+950001;2016;86,5;kappa > 0,50;2247196;1982;75,8;kappa > 0,50;2651013;2004;60,3;Mais de 5 anos consecutivos sem dados
+950001;2017;81,2;kappa > 0,50;2247196;1983;83,2;kappa > 0,50;2651013;2005;118,1;Mais de 5 anos consecutivos sem dados
+950001;2018;85;kappa > 0,50;2247196;1984;69,2;kappa > 0,50;2651013;2006;110,5;Mais de 5 anos consecutivos sem dados
+950001;2019;85,9;kappa > 0,50;2247196;1985;58,6;kappa > 0,50;2651013;2007;85,5;Mais de 5 anos consecutivos sem dados
+950001;2021;93,1;kappa > 0,50;2247196;1989;79,8;kappa > 0,50;2651013;2008;70,4;Mais de 5 anos consecutivos sem dados
+968001;1974;116,2;kappa > 0,50;2247196;1990;82,4;kappa > 0,50;2651013;2009;92,2;Mais de 5 anos consecutivos sem dados
+968001;1975;84;kappa > 0,50;2247196;1991;66,3;kappa > 0,50;2651013;2010;96,5;Mais de 5 anos consecutivos sem dados
+968001;1976;105,5;kappa > 0,50;2247196;1992;72,2;kappa > 0,50;2651013;2011;125;Mais de 5 anos consecutivos sem dados
+968001;1977;100,8;kappa > 0,50;2247196;1993;77,5;kappa > 0,50;2651013;2012;75,5;Mais de 5 anos consecutivos sem dados
+968001;1978;89;kappa > 0,50;2247196;1994;73,4;kappa > 0,50;2651013;2018;1999,8;Mais de 5 anos consecutivos sem dados
+968001;1979;68,2;kappa > 0,50;2247196;1995;81,6;kappa > 0,50;2652025;1976;65,8;kappa > 0,50
+968001;1980;135,2;kappa > 0,50;2247196;1996;78,3;kappa > 0,50;2652025;1977;90,2;kappa > 0,50
+968001;1981;91,9;kappa > 0,50;2247196;1997;77,2;kappa > 0,50;2652025;1978;136,8;kappa > 0,50
+968001;1984;154,6;kappa > 0,50;2247196;1998;118;kappa > 0,50;2652025;1979;98,3;kappa > 0,50
+968001;1985;70;kappa > 0,50;2247196;1999;66,8;kappa > 0,50;2652025;1980;99,4;kappa > 0,50
+968001;1986;73,4;kappa > 0,50;2247196;2000;91,9;kappa > 0,50;2652025;1981;91,8;kappa > 0,50
+968001;1987;108,5;kappa > 0,50;2247196;2001;96,6;kappa > 0,50;2652025;1982;139,4;kappa > 0,50
+968001;1988;80,4;kappa > 0,50;2247196;2002;128,1;kappa > 0,50;2652025;1983;76,2;kappa > 0,50
+968001;1989;85,3;kappa > 0,50;2247196;2003;84;kappa > 0,50;2652025;1984;97;kappa > 0,50
+968001;1990;99;kappa > 0,50;2247196;2004;77,4;kappa > 0,50;2652025;1985;83,6;kappa > 0,50
+968001;1991;99,6;kappa > 0,50;2247196;2005;62,1;kappa > 0,50;2652025;1986;108,6;kappa > 0,50
+968001;1992;77;kappa > 0,50;2247196;2006;63,9;kappa > 0,50;2652025;1987;87,8;kappa > 0,50
+968001;1993;86,1;kappa > 0,50;2247196;2011;86,6;kappa > 0,50;2652025;1988;134,2;kappa > 0,50
+968001;1996;75;kappa > 0,50;2247196;2012;151,8;kappa > 0,50;2652025;1989;650,9;kappa > 0,50
+968001;1998;86,2;kappa > 0,50;2247196;2013;450;kappa > 0,50;2652025;1990;127,2;kappa > 0,50
+968001;1999;86,7;kappa > 0,50;2247196;2017;52;kappa > 0,50;2652025;1991;111,8;kappa > 0,50
+968001;2000;80,5;kappa > 0,50;2247196;2018;63,7;kappa > 0,50;2652025;1992;86,7;kappa > 0,50
+968001;2001;101,8;kappa > 0,50;2247196;2019;127;kappa > 0,50;2652025;1993;101,1;kappa > 0,50
+968001;2002;59,3;kappa > 0,50;2252010;1968;116,5;Mais de 5 anos consecutivos sem dados;2652025;1994;80,5;kappa > 0,50
+968001;2003;72;kappa > 0,50;2252010;1969;82;Mais de 5 anos consecutivos sem dados;2652025;1995;79,1;kappa > 0,50
+968001;2004;92,4;kappa > 0,50;2252010;1971;71,2;Mais de 5 anos consecutivos sem dados;2652025;1996;111,6;kappa > 0,50
+968001;2007;35;kappa > 0,50;2252010;1972;92,4;Mais de 5 anos consecutivos sem dados;2652025;1997;152,2;kappa > 0,50
+968001;2008;14,9;kappa > 0,50;2252010;1973;72,4;Mais de 5 anos consecutivos sem dados;2652025;1998;84,3;kappa > 0,50
+968001;2009;21,4;kappa > 0,50;2252010;1974;92,2;Mais de 5 anos consecutivos sem dados;2652025;1999;63,9;kappa > 0,50
+968001;2010;8,3;kappa > 0,50;2252010;1975;93,8;Mais de 5 anos consecutivos sem dados;2652025;2000;105,1;kappa > 0,50
+968001;2012;13;kappa > 0,50;2252010;1976;87,4;Mais de 5 anos consecutivos sem dados;2652025;2001;102,2;kappa > 0,50
+968001;2013;9,3;kappa > 0,50;2252010;1977;64,4;Mais de 5 anos consecutivos sem dados;2652025;2002;92,2;kappa > 0,50
+968001;2016;86,6;kappa > 0,50;2252010;1978;51;Mais de 5 anos consecutivos sem dados;2652025;2003;115,3;kappa > 0,50
+968001;2017;88,6;kappa > 0,50;2252010;1979;86,2;Mais de 5 anos consecutivos sem dados;2652025;2004;106,4;kappa > 0,50
+968001;2020;86;kappa > 0,50;2252010;1980;63,8;Mais de 5 anos consecutivos sem dados;2652025;2005;116,6;kappa > 0,50
+968001;2021;98;kappa > 0,50;2252010;1981;72;Mais de 5 anos consecutivos sem dados;2652025;2006;106;kappa > 0,50
+969001;1983;89;kappa > 0,50;2252010;1982;101,2;Mais de 5 anos consecutivos sem dados;2652025;2007;79,5;kappa > 0,50
+969001;1984;118;kappa > 0,50;2252010;1983;61,2;Mais de 5 anos consecutivos sem dados;2652025;2008;83,4;kappa > 0,50
+969001;1985;133;kappa > 0,50;2252010;1984;69,6;Mais de 5 anos consecutivos sem dados;2652025;2009;115,1;kappa > 0,50
+969001;1986;118,1;kappa > 0,50;2252010;1985;98,6;Mais de 5 anos consecutivos sem dados;2652025;2010;88,3;kappa > 0,50
+969001;1987;57,1;kappa > 0,50;2252010;1986;54,4;Mais de 5 anos consecutivos sem dados;2652025;2011;94,4;kappa > 0,50
+969001;1988;115,4;kappa > 0,50;2252010;1987;80,4;Mais de 5 anos consecutivos sem dados;2652025;2014;92,7;kappa > 0,50
+969001;1991;141,4;kappa > 0,50;2252010;1988;80,4;Mais de 5 anos consecutivos sem dados;2652025;2018;154,8;kappa > 0,50
+969001;1996;93,2;kappa > 0,50;2252010;1989;75,6;Mais de 5 anos consecutivos sem dados;2849002;1940;95,3;Mais de 5 anos consecutivos sem dados
+969001;1997;110,2;kappa > 0,50;2252010;1990;68,6;Mais de 5 anos consecutivos sem dados;2849002;1941;58;Mais de 5 anos consecutivos sem dados
+969001;1998;121,2;kappa > 0,50;2252010;1991;98,2;Mais de 5 anos consecutivos sem dados;2849002;1942;56,1;Mais de 5 anos consecutivos sem dados
+969001;1999;113,2;kappa > 0,50;2252010;1992;108,6;Mais de 5 anos consecutivos sem dados;2849002;1943;54;Mais de 5 anos consecutivos sem dados
+969001;2000;66,2;kappa > 0,50;2252010;1993;73,4;Mais de 5 anos consecutivos sem dados;2849002;1944;55;Mais de 5 anos consecutivos sem dados
+969001;2001;102,4;kappa > 0,50;2252010;1995;80,4;Mais de 5 anos consecutivos sem dados;2849002;1945;98,2;Mais de 5 anos consecutivos sem dados
+969001;2002;131,2;kappa > 0,50;2252010;1996;110,8;Mais de 5 anos consecutivos sem dados;2849002;1946;47;Mais de 5 anos consecutivos sem dados
+969001;2003;121,3;kappa > 0,50;2252010;1997;83,5;Mais de 5 anos consecutivos sem dados;2849002;1947;105;Mais de 5 anos consecutivos sem dados
+969001;2004;119,4;kappa > 0,50;2252010;1998;120,4;Mais de 5 anos consecutivos sem dados;2849002;1948;56;Mais de 5 anos consecutivos sem dados
+969001;2019;146,2;kappa > 0,50;2252010;1999;119;Mais de 5 anos consecutivos sem dados;2849002;1949;52;Mais de 5 anos consecutivos sem dados
+1047004;1984;73;kappa > 0,50;2252010;2000;70,4;Mais de 5 anos consecutivos sem dados;2849002;1950;64,4;Mais de 5 anos consecutivos sem dados
+1047004;1985;87,6;kappa > 0,50;2252010;2001;130;Mais de 5 anos consecutivos sem dados;2849002;1951;58,2;Mais de 5 anos consecutivos sem dados
+1047004;1986;90,8;kappa > 0,50;2252010;2004;70,1;Mais de 5 anos consecutivos sem dados;2849002;1952;73,4;Mais de 5 anos consecutivos sem dados
+1047004;1987;54,4;kappa > 0,50;2252010;2011;108,9;Mais de 5 anos consecutivos sem dados;2849002;1953;92,6;Mais de 5 anos consecutivos sem dados
+1047004;1989;77,4;kappa > 0,50;2252010;2012;113,5;Mais de 5 anos consecutivos sem dados;2849002;1954;49,6;Mais de 5 anos consecutivos sem dados
+1047004;1990;99,8;kappa > 0,50;2252010;2013;53,9;Mais de 5 anos consecutivos sem dados;2849002;1955;125,2;Mais de 5 anos consecutivos sem dados
+1047004;1991;83,2;kappa > 0,50;2252010;2014;60;Mais de 5 anos consecutivos sem dados;2849002;1956;63,6;Mais de 5 anos consecutivos sem dados
+1047004;1992;77,2;kappa > 0,50;2252010;2015;118,2;Mais de 5 anos consecutivos sem dados;2849002;1957;70;Mais de 5 anos consecutivos sem dados
+1047004;1994;84,4;kappa > 0,50;2252010;2016;79,1;Mais de 5 anos consecutivos sem dados;2849002;1958;66,2;Mais de 5 anos consecutivos sem dados
+1047004;1995;88,2;kappa > 0,50;2252010;2018;1555,4;Mais de 5 anos consecutivos sem dados;2849002;1959;92,2;Mais de 5 anos consecutivos sem dados
+1047004;1996;41;kappa > 0,50;2348078;1974;86,2;kappa > 0,50;2849002;1960;61,8;Mais de 5 anos consecutivos sem dados
+1047004;1997;42;kappa > 0,50;2348078;1975;85;kappa > 0,50;2849002;1961;83,2;Mais de 5 anos consecutivos sem dados
+1047004;1998;120;kappa > 0,50;2348078;1976;75,7;kappa > 0,50;2849002;1962;63,4;Mais de 5 anos consecutivos sem dados
+1047004;1999;90,6;kappa > 0,50;2348078;1977;88,6;kappa > 0,50;2849002;1963;64,8;Mais de 5 anos consecutivos sem dados
+1047004;2000;57,3;kappa > 0,50;2348078;1978;96,2;kappa > 0,50;2849002;1964;59,4;Mais de 5 anos consecutivos sem dados
+1047004;2001;73,2;kappa > 0,50;2348078;1979;79,5;kappa > 0,50;2849002;1965;91;Mais de 5 anos consecutivos sem dados
+1047004;2002;67,1;kappa > 0,50;2348078;1980;93,2;kappa > 0,50;2849002;1966;72;Mais de 5 anos consecutivos sem dados
+1047004;2003;60,1;kappa > 0,50;2348078;1981;75,4;kappa > 0,50;2849002;1967;65,4;Mais de 5 anos consecutivos sem dados
+1047004;2004;29,6;kappa > 0,50;2348078;1982;79,7;kappa > 0,50;2849002;1968;76,2;Mais de 5 anos consecutivos sem dados
+1047004;2005;9,9;kappa > 0,50;2348078;1983;71,4;kappa > 0,50;2849002;1969;35,6;Mais de 5 anos consecutivos sem dados
+1047004;2006;106,4;kappa > 0,50;2348078;1984;90;kappa > 0,50;2849002;1970;110;Mais de 5 anos consecutivos sem dados
+1047004;2008;119,7;kappa > 0,50;2348078;1985;112,9;kappa > 0,50;2849002;1971;54,2;Mais de 5 anos consecutivos sem dados
+1047004;2009;94,8;kappa > 0,50;2348078;1986;85,2;kappa > 0,50;2849002;1972;107,6;Mais de 5 anos consecutivos sem dados
+1047004;2010;95,2;kappa > 0,50;2348078;1987;93,8;kappa > 0,50;2849002;1974;59;Mais de 5 anos consecutivos sem dados
+1047004;2011;99,6;kappa > 0,50;2348078;1988;74,6;kappa > 0,50;2849002;1975;70,4;Mais de 5 anos consecutivos sem dados
+1047004;2012;83,6;kappa > 0,50;2348078;1989;60,4;kappa > 0,50;2849002;1976;74,7;Mais de 5 anos consecutivos sem dados
+1047004;2013;71,1;kappa > 0,50;2348078;1990;79,2;kappa > 0,50;2849002;1977;110,2;Mais de 5 anos consecutivos sem dados
+1047004;2014;69,3;kappa > 0,50;2348078;1991;53;kappa > 0,50;2849002;1978;54,6;Mais de 5 anos consecutivos sem dados
+1047004;2015;65,5;kappa > 0,50;2348078;1992;100,6;kappa > 0,50;2849002;1979;71;Mais de 5 anos consecutivos sem dados
+1047004;2016;92,2;kappa > 0,50;2348078;1993;11;kappa > 0,50;2849002;1980;91;Mais de 5 anos consecutivos sem dados
+1047004;2017;97,1;kappa > 0,50;2348078;1994;7,1;kappa > 0,50;2849002;1981;74;Mais de 5 anos consecutivos sem dados
+1047004;2018;110,9;kappa > 0,50;2348078;1995;74,2;kappa > 0,50;2849002;1982;79,6;Mais de 5 anos consecutivos sem dados
+1047004;2019;115,7;kappa > 0,50;2348078;1998;53,5;kappa > 0,50;2849002;1983;105,2;Mais de 5 anos consecutivos sem dados
+1047004;2021;100,3;kappa > 0,50;2348078;1999;53;kappa > 0,50;2849002;1984;100,8;Mais de 5 anos consecutivos sem dados
+1062003;1984;62,4;kappa > 0,50;2348078;2000;50;kappa > 0,50;2849002;1985;62,2;Mais de 5 anos consecutivos sem dados
+1062003;1985;79;kappa > 0,50;2348078;2001;102,5;kappa > 0,50;2849002;1986;112,4;Mais de 5 anos consecutivos sem dados
+1062003;1986;115,4;kappa > 0,50;2348078;2005;43,9;kappa > 0,50;2849002;1988;83;Mais de 5 anos consecutivos sem dados
+1062003;1987;95;kappa > 0,50;2348078;2006;48,6;kappa > 0,50;2849002;1989;70;Mais de 5 anos consecutivos sem dados
+1062003;1988;105;kappa > 0,50;2348078;2007;57,7;kappa > 0,50;2849002;1992;89;Mais de 5 anos consecutivos sem dados
+1062003;1991;98,3;kappa > 0,50;2348078;2008;89,7;kappa > 0,50;2849002;1993;51;Mais de 5 anos consecutivos sem dados
+1062003;1992;67,1;kappa > 0,50;2348078;2009;104;kappa > 0,50;2849002;1994;119,2;Mais de 5 anos consecutivos sem dados
+1062003;1993;13,3;kappa > 0,50;2348078;2010;88,6;kappa > 0,50;2849002;1995;122,8;Mais de 5 anos consecutivos sem dados
+1062003;1994;90;kappa > 0,50;2348078;2011;124,8;kappa > 0,50;2849002;1996;76,8;Mais de 5 anos consecutivos sem dados
+1062003;1995;85,4;kappa > 0,50;2348078;2013;66,7;kappa > 0,50;2849002;1997;64,5;Mais de 5 anos consecutivos sem dados
+1062003;1996;78,2;kappa > 0,50;2350063;1981;77,4;Mais de 5 anos consecutivos sem dados;2849002;1998;65,6;Mais de 5 anos consecutivos sem dados
+1062003;1997;89,2;kappa > 0,50;2350063;1982;60;Mais de 5 anos consecutivos sem dados;2849002;1999;89,2;Mais de 5 anos consecutivos sem dados
+1062003;1998;46,5;kappa > 0,50;2350063;1984;76,6;Mais de 5 anos consecutivos sem dados;2849002;2000;90,2;Mais de 5 anos consecutivos sem dados
+1062003;1999;61,5;kappa > 0,50;2350063;1985;87,2;Mais de 5 anos consecutivos sem dados;2849002;2001;87,4;Mais de 5 anos consecutivos sem dados
+1062003;2000;77,5;kappa > 0,50;2350063;1986;123,3;Mais de 5 anos consecutivos sem dados;2849002;2002;2300;Mais de 5 anos consecutivos sem dados
+1062003;2001;86;kappa > 0,50;2350063;1987;101,8;Mais de 5 anos consecutivos sem dados;2849002;2008;60,8;Mais de 5 anos consecutivos sem dados
+1062003;2003;85,7;kappa > 0,50;2350063;1988;85,2;Mais de 5 anos consecutivos sem dados;2849002;2010;89,4;Mais de 5 anos consecutivos sem dados
+1062003;2004;63;kappa > 0,50;2350063;1991;120;Mais de 5 anos consecutivos sem dados;2849002;2011;79;Mais de 5 anos consecutivos sem dados
+1062003;2005;58,2;kappa > 0,50;2350063;1992;71,1;Mais de 5 anos consecutivos sem dados;2849002;2013;113,2;Mais de 5 anos consecutivos sem dados
+1062003;2006;75,9;kappa > 0,50;2350063;1993;66,5;Mais de 5 anos consecutivos sem dados;2849002;2015;90,9;Mais de 5 anos consecutivos sem dados
+1062003;2007;64,3;kappa > 0,50;2350063;1994;83,3;Mais de 5 anos consecutivos sem dados;2849002;2017;74,9;Mais de 5 anos consecutivos sem dados
+1062003;2008;90,5;kappa > 0,50;2350063;1995;84,3;Mais de 5 anos consecutivos sem dados;2849002;2019;107,2;Mais de 5 anos consecutivos sem dados
+1062003;2011;90,5;kappa > 0,50;2350063;1996;114,8;Mais de 5 anos consecutivos sem dados;2849002;2021;81,7;Mais de 5 anos consecutivos sem dados
+1062003;2012;87,9;kappa > 0,50;2350063;1997;105,7;Mais de 5 anos consecutivos sem dados;2854003;1945;118,4;Estação não otimizada
+1062003;2014;82;kappa > 0,50;2350063;1998;92;Mais de 5 anos consecutivos sem dados;2854003;1946;100,4;Estação não otimizada
+1062003;2017;80,4;kappa > 0,50;2350063;1999;62,4;Mais de 5 anos consecutivos sem dados;2854003;1947;95,3;Estação não otimizada
+1062003;2019;84,6;kappa > 0,50;2350063;2000;57,2;Mais de 5 anos consecutivos sem dados;2854003;1948;64;Estação não otimizada
+1062003;2020;94,8;kappa > 0,50;2350063;2001;67,8;Mais de 5 anos consecutivos sem dados;2854003;1949;105;Estação não otimizada
+1062003;2021;98,9;kappa > 0,50;2350063;2002;90,5;Mais de 5 anos consecutivos sem dados;2854003;1950;117;Estação não otimizada
+1262000;1981;107;kappa > 0,50;2350063;2003;130,5;Mais de 5 anos consecutivos sem dados;2854003;1951;142,2;Estação não otimizada
+1262000;1982;75,1;kappa > 0,50;2350063;2004;75,7;Mais de 5 anos consecutivos sem dados;2854003;1952;94;Estação não otimizada
+1262000;1984;109;kappa > 0,50;2350063;2006;91,7;Mais de 5 anos consecutivos sem dados;2854003;1953;54;Estação não otimizada
+1262000;1986;50,1;kappa > 0,50;2350063;2007;73,1;Mais de 5 anos consecutivos sem dados;2854003;1954;17,6;Estação não otimizada
+1262000;1987;95;kappa > 0,50;2350063;2008;107,4;Mais de 5 anos consecutivos sem dados;2854003;1955;11,2;Estação não otimizada
+1262000;1988;93;kappa > 0,50;2350063;2009;222,7;Mais de 5 anos consecutivos sem dados;2854003;1956;23;Estação não otimizada
+1262000;1991;90,2;kappa > 0,50;2350063;2010;76,7;Mais de 5 anos consecutivos sem dados;2854003;1957;11,2;Estação não otimizada
+1262000;1995;54,2;kappa > 0,50;2350063;2011;80,6;Mais de 5 anos consecutivos sem dados;2854003;1958;33;Estação não otimizada
+1262000;1998;126,4;kappa > 0,50;2350063;2012;57,7;Mais de 5 anos consecutivos sem dados;2854003;1959;10,5;Estação não otimizada
+1262000;1999;95,5;kappa > 0,50;2350063;2018;1555,4;Mais de 5 anos consecutivos sem dados;2854003;1960;23,4;Estação não otimizada
+1262000;2000;88,3;kappa > 0,50;2351013;1964;84;Mais de 5 anos consecutivos sem dados;2854003;1961;39,8;Estação não otimizada
+1262000;2001;118,3;kappa > 0,50;2351013;1965;83;Mais de 5 anos consecutivos sem dados;2854003;1962;18,4;Estação não otimizada
+1262000;2002;96,1;kappa > 0,50;2351013;1966;62;Mais de 5 anos consecutivos sem dados;2854003;1963;15,3;Estação não otimizada
+1262000;2003;95,5;kappa > 0,50;2351013;1967;60;Mais de 5 anos consecutivos sem dados;2854003;1964;25,4;Estação não otimizada
+1262000;2004;99,2;kappa > 0,50;2351013;1969;66,1;Mais de 5 anos consecutivos sem dados;2854003;1965;25,1;Estação não otimizada
+1262000;2005;99,5;kappa > 0,50;2351013;1976;999,7;Mais de 5 anos consecutivos sem dados;2854003;1966;25;Estação não otimizada
+1262000;2006;99,3;kappa > 0,50;2351013;1979;90;Mais de 5 anos consecutivos sem dados;2854003;1967;25;Estação não otimizada
+1262000;2007;98,1;kappa > 0,50;2351013;1981;127,3;Mais de 5 anos consecutivos sem dados;2854003;1968;25;Estação não otimizada
+1262000;2008;97,1;kappa > 0,50;2351013;1982;82,8;Mais de 5 anos consecutivos sem dados;2854003;1969;90;Estação não otimizada
+1262000;2009;99,1;kappa > 0,50;2351013;1983;101,1;Mais de 5 anos consecutivos sem dados;2854003;1970;60,4;Estação não otimizada
+1262000;2010;99,1;kappa > 0,50;2351013;1984;92,9;Mais de 5 anos consecutivos sem dados;2854003;1971;143,1;Estação não otimizada
+1262000;2011;108,6;kappa > 0,50;2351013;1986;84,2;Mais de 5 anos consecutivos sem dados;2854003;1972;237,4;Estação não otimizada
+1262000;2012;101,3;kappa > 0,50;2351013;1987;104,8;Mais de 5 anos consecutivos sem dados;2854003;1973;98,5;Estação não otimizada
+1262000;2013;67,2;kappa > 0,50;2351013;1988;69;Mais de 5 anos consecutivos sem dados;2854003;1974;111;Estação não otimizada
+1262000;2015;48,7;kappa > 0,50;2351013;1989;69,8;Mais de 5 anos consecutivos sem dados;2854003;1975;83,2;Estação não otimizada
+1262000;2016;56,8;kappa > 0,50;2351013;1990;76;Mais de 5 anos consecutivos sem dados;2854003;1976;55;Estação não otimizada
+1262000;2017;91,9;kappa > 0,50;2351013;1991;61,4;Mais de 5 anos consecutivos sem dados;2854003;1977;100,3;Estação não otimizada
+1262000;2018;53,9;kappa > 0,50;2351013;1992;101,6;Mais de 5 anos consecutivos sem dados;2854003;1978;76,5;Estação não otimizada
+1262000;2019;92;kappa > 0,50;2351013;1993;96,8;Mais de 5 anos consecutivos sem dados;2854003;1979;99,4;Estação não otimizada
+1262000;2020;43,8;kappa > 0,50;2351013;1994;77,5;Mais de 5 anos consecutivos sem dados;2854003;1980;100;Estação não otimizada
+1262000;2021;114,8;kappa > 0,50;2351013;1995;111,2;Mais de 5 anos consecutivos sem dados;2854003;1981;68;Estação não otimizada
+1262001;2000;70;kappa > 0,50;2351013;1996;151,5;Mais de 5 anos consecutivos sem dados;2854003;1982;99,2;Estação não otimizada
+1262001;2001;94;kappa > 0,50;2351013;1997;81,9;Mais de 5 anos consecutivos sem dados;2854003;1983;107;Estação não otimizada
+1262001;2002;104,5;kappa > 0,50;2351013;1998;94,4;Mais de 5 anos consecutivos sem dados;2854003;1984;84,3;Estação não otimizada
+1262001;2003;81;kappa > 0,50;2351013;1999;90,3;Mais de 5 anos consecutivos sem dados;2854003;1985;91,3;Estação não otimizada
+1262001;2004;60,1;kappa > 0,50;2351013;2000;64,3;Mais de 5 anos consecutivos sem dados;2854003;1986;115,3;Estação não otimizada
+1262001;2006;95;kappa > 0,50;2351013;2001;78,6;Mais de 5 anos consecutivos sem dados;2854003;1987;90,2;Estação não otimizada
+1262001;2007;86,9;kappa > 0,50;2351013;2002;74,1;Mais de 5 anos consecutivos sem dados;2854003;1988;70,1;Estação não otimizada
+1262001;2008;81,9;kappa > 0,50;2351013;2003;59,4;Mais de 5 anos consecutivos sem dados;2854003;1989;102,3;Estação não otimizada
+1262001;2009;123,4;kappa > 0,50;2351013;2004;76,3;Mais de 5 anos consecutivos sem dados;2854003;1990;99,1;Estação não otimizada
+1262001;2011;115,5;kappa > 0,50;2351013;2007;77,9;Mais de 5 anos consecutivos sem dados;2854003;1991;70,3;Estação não otimizada
+1262001;2013;90;kappa > 0,50;2351013;2010;127,2;Mais de 5 anos consecutivos sem dados;2854003;1992;120;Estação não otimizada
+1262001;2015;94,7;kappa > 0,50;2351013;2011;142,6;Mais de 5 anos consecutivos sem dados;2854003;1993;98;Estação não otimizada
+1262001;2016;82,3;kappa > 0,50;2351013;2012;107,2;Mais de 5 anos consecutivos sem dados;2854003;1995;97,8;Estação não otimizada
+1262001;2017;90,5;kappa > 0,50;2351013;2013;85,4;Mais de 5 anos consecutivos sem dados;2854003;1996;85,3;Estação não otimizada
+1262001;2019;406,3;kappa > 0,50;2351013;2014;138,2;Mais de 5 anos consecutivos sem dados;2854003;1997;122,7;Estação não otimizada
+1262001;2020;90,15;kappa > 0,50;2351013;2015;137,7;Mais de 5 anos consecutivos sem dados;2854003;1998;94,1;Estação não otimizada
+1448005;1985;63;kappa > 0,50;2351013;2016;84,3;Mais de 5 anos consecutivos sem dados;2854003;1999;97,9;Estação não otimizada
+1448005;1986;85;kappa > 0,50;2351013;2018;115;Mais de 5 anos consecutivos sem dados;2854003;2000;100,3;Estação não otimizada
+1448005;1992;60,5;kappa > 0,50;2352055;1976;100,4;kappa > 0,50;2854003;2001;108,5;Estação não otimizada
+1448005;1994;75;kappa > 0,50;2352055;1977;79,2;kappa > 0,50;2854003;2002;101,6;Estação não otimizada
+1448005;1995;57;kappa > 0,50;2352055;1978;82;kappa > 0,50;2854003;2003;194,5;Estação não otimizada
+1448005;1997;94,9;kappa > 0,50;2352055;1979;81,2;kappa > 0,50;2854003;2004;60,3;Estação não otimizada
+1448005;1998;59,1;kappa > 0,50;2352055;1980;84;kappa > 0,50;2854003;2005;90,1;Estação não otimizada
+1448005;1999;69;kappa > 0,50;2352055;1981;93,5;kappa > 0,50;2854003;2006;78,1;Estação não otimizada
+1448005;2000;42,5;kappa > 0,50;2352055;1982;92,6;kappa > 0,50;2854003;2010;114,3;Estação não otimizada
+1448005;2001;96,6;kappa > 0,50;2352055;1983;60,4;kappa > 0,50;2854003;2011;119,5;Estação não otimizada
+1448005;2002;78,7;kappa > 0,50;2352055;1984;80,2;kappa > 0,50;2854003;2012;120,7;Estação não otimizada
+1448005;2003;87,4;kappa > 0,50;2352055;1985;77;kappa > 0,50;2854003;2013;134,4;Estação não otimizada
+1448005;2004;67,8;kappa > 0,50;2352055;1986;84,4;kappa > 0,50;2854003;2014;132,5;Estação não otimizada
+1448005;2005;90,6;kappa > 0,50;2352055;1987;500;kappa > 0,50;2854003;2015;106,4;Estação não otimizada
+1448005;2008;89,4;kappa > 0,50;2352055;1988;59,8;kappa > 0,50;2854003;2016;145,3;Estação não otimizada
+1448005;2009;81,9;kappa > 0,50;2352055;1989;88;kappa > 0,50;2854003;2017;148,8;Estação não otimizada
+1448005;2010;98,7;kappa > 0,50;2352055;1990;69,6;kappa > 0,50;2854003;2018;91,3;Estação não otimizada
+1448005;2011;84,4;kappa > 0,50;2352055;1992;64,4;kappa > 0,50;2854003;2019;88,6;Estação não otimizada
+1448005;2012;93,1;kappa > 0,50;2352055;1993;77,2;kappa > 0,50;2854003;2020;123,6;Estação não otimizada
+1448005;2014;96,5;kappa > 0,50;2352055;1994;69,2;kappa > 0,50;2854003;2021;65,4;Estação não otimizada
+1448005;2016;89,1;kappa > 0,50;2352055;1995;83,2;kappa > 0,50;8151000;1984;138,1;kappa > 0,50
+1448005;2017;98,9;kappa > 0,50;2352055;1996;155,8;kappa > 0,50;8151000;1985;142,7;kappa > 0,50
+1448005;2018;69,6;kappa > 0,50;2352055;1997;111,2;kappa > 0,50;8151000;1986;127,6;kappa > 0,50
+1448005;2019;86,3;kappa > 0,50;2352055;1998;116,8;kappa > 0,50;8151000;1987;120,6;kappa > 0,50
+1448005;2020;82,9;kappa > 0,50;2352055;1999;80;kappa > 0,50;8151000;1988;111,7;kappa > 0,50
+1547027;1995;71,4;kappa > 0,50;2352055;2000;85,7;kappa > 0,50;8151000;1990;97,2;kappa > 0,50
+1547027;1996;86;kappa > 0,50;2352055;2001;75;kappa > 0,50;8151000;1991;98,6;kappa > 0,50
+1547027;1997;49,6;kappa > 0,50;2352055;2002;93,7;kappa > 0,50;8151000;1993;83,5;kappa > 0,50
+1547027;1998;84,4;kappa > 0,50;2352055;2003;94;kappa > 0,50;8151000;1994;106,7;kappa > 0,50
+1547027;1999;68;kappa > 0,50;2352055;2004;99,2;kappa > 0,50;8151000;1995;101,3;kappa > 0,50
+1547027;2000;70,2;kappa > 0,50;2352055;2005;143,8;kappa > 0,50;8151000;1996;105,7;kappa > 0,50
+1547027;2002;58;kappa > 0,50;2352055;2006;97,2;kappa > 0,50;8151000;1997;110;kappa > 0,50
+1547027;2003;86;kappa > 0,50;2352055;2007;78,2;kappa > 0,50;8151000;1998;146,9;kappa > 0,50
+1547027;2004;77,6;kappa > 0,50;2352055;2009;60,3;kappa > 0,50;8151000;1999;125,1;kappa > 0,50
+1547027;2005;71,8;kappa > 0,50;2352055;2010;72,8;kappa > 0,50;8151000;2000;137,5;kappa > 0,50
+1547027;2006;78,4;kappa > 0,50;2352055;2012;64,7;kappa > 0,50;8151000;2001;128,7;kappa > 0,50
+1547027;2007;77,7;kappa > 0,50;2352055;2014;92,1;kappa > 0,50;8151000;2002;103,6;kappa > 0,50
+1547027;2008;48,9;kappa > 0,50;2447075;1981;71,5;kappa > 0,50;8151000;2003;111,3;kappa > 0,50
+1547027;2009;81;kappa > 0,50;2447075;1982;89;kappa > 0,50;8151000;2004;108,5;kappa > 0,50
+1547027;2010;60,6;kappa > 0,50;2447075;1983;104;kappa > 0,50;8151000;2005;81,7;kappa > 0,50
+1547027;2011;84,9;kappa > 0,50;2447075;1984;91,5;kappa > 0,50;8151000;2006;144,7;kappa > 0,50
+1558004;1965;82,8;kappa > 0,50;2447075;1985;56,7;kappa > 0,50;8151000;2012;82,3;kappa > 0,50
+1558004;1966;75,4;kappa > 0,50;2447075;1986;98,1;kappa > 0,50;8151000;2015;62,1;kappa > 0,50
+1558004;1967;90,8;kappa > 0,50;2447075;1987;82;kappa > 0,50;8151000;2016;60,3;kappa > 0,50
+1558004;1968;60;kappa > 0,50;2447075;1989;95,1;kappa > 0,50;8151000;2018;47,2;kappa > 0,50
+1558004;1969;100;kappa > 0,50;2447075;1990;99,1;kappa > 0,50;8151000;2020;39,1;kappa > 0,50
+1558004;1970;58;kappa > 0,50;2447075;1991;28,9;kappa > 0,50;8361005;1993;73;kappa > 0,50
+1558004;1971;93;kappa > 0,50;2447075;1992;121,8;kappa > 0,50;8361005;1995;80;kappa > 0,50
+1558004;1976;65,4;kappa > 0,50;2447075;1993;95,4;kappa > 0,50;8361005;1997;83;kappa > 0,50
+1558004;1977;79;kappa > 0,50;2447075;1994;50,4;kappa > 0,50;8361005;1998;88,8;kappa > 0,50
+1558004;1978;480;kappa > 0,50;2447075;1995;99,5;kappa > 0,50;8361005;1999;93;kappa > 0,50
+1558004;1980;70,6;kappa > 0,50;2447075;1996;91,7;kappa > 0,50;8361005;2000;78,1;kappa > 0,50
+1558004;1981;89;kappa > 0,50;2447075;1997;95,7;kappa > 0,50;8361005;2001;87,6;kappa > 0,50
+1558004;1982;127,2;kappa > 0,50;2447075;1998;97,7;kappa > 0,50;8361005;2002;90,7;kappa > 0,50
+1558004;1983;68,1;kappa > 0,50;2447075;1999;69,5;kappa > 0,50;8361005;2003;90;kappa > 0,50
+1558004;1984;55,3;kappa > 0,50;2447075;2000;79,4;kappa > 0,50;8361005;2005;98,1;kappa > 0,50
+1558004;1985;90,3;kappa > 0,50;2447075;2001;79,6;kappa > 0,50;8361005;2006;91,9;kappa > 0,50
+1558004;1986;53;kappa > 0,50;2447075;2002;41,3;kappa > 0,50;8361005;2007;79,1;kappa > 0,50
+1558004;1993;55,2;kappa > 0,50;2447075;2003;99,7;kappa > 0,50;8361005;2008;83,5;kappa > 0,50
+1558004;1995;75,1;kappa > 0,50;2447075;2004;97,7;kappa > 0,50;8361005;2009;24,1;kappa > 0,50
+1558004;1996;81,2;kappa > 0,50;2447075;2005;87,4;kappa > 0,50;8361005;2010;18,7;kappa > 0,50
+1558004;1997;76,1;kappa > 0,50;2447075;2006;99,3;kappa > 0,50;8361005;2012;20,8;kappa > 0,50
+1558004;1998;82,3;kappa > 0,50;2447075;2011;39,3;kappa > 0,50;8361005;2016;42;kappa > 0,50
+1558004;1999;90,1;kappa > 0,50;2447075;2013;149,5;kappa > 0,50;8361005;2017;94,6;kappa > 0,50
+1558004;2000;67,6;kappa > 0,50;2447075;2018;93,6;kappa > 0,50;8361005;2018;153,7;kappa > 0,50
+1558004;2001;85,5;kappa > 0,50;2447075;2020;96,7;kappa > 0,50;8361005;2019;84,3;kappa > 0,50
+1558004;2002;96,3;kappa > 0,50;2450058;1976;50;kappa > 0,50;8361005;2020;85,6;kappa > 0,50
+1558004;2003;157;kappa > 0,50;2450058;1977;50;kappa > 0,50;363000;2020;905;Precipitação > 700 mm
+1558004;2004;86,9;kappa > 0,50;2450058;1978;50;kappa > 0,50;445010;2004;1006,5;Precipitação > 700 mm
+1558004;2005;90,9;kappa > 0,50;2450058;1979;50;kappa > 0,50;1557005;2011;1405;Precipitação > 700 mm
+1558004;2008;96;kappa > 0,50;2450058;1980;50;kappa > 0,50;1851000;1995;989,6;Precipitação > 700 mm
+1558004;2009;108;kappa > 0,50;2450058;1981;50;kappa > 0,50;1954002;1976;979,2;Precipitação > 700 mm
+1558004;2010;70,9;kappa > 0,50;2450058;1982;50;kappa > 0,50;2150040;2000;999;Precipitação > 700 mm
+1558004;2011;130,7;kappa > 0,50;2450058;1983;50;kappa > 0,50;2246023;1999;828,9;Precipitação > 700 mm
+1558004;2012;90;kappa > 0,50;2450058;1984;50;kappa > 0,50;2251023;2016;1555,4;Precipitação > 700 mm
+1558004;2013;444;kappa > 0,50;2450058;1985;50;kappa > 0,50;2252010;2018;1555,4;Precipitação > 700 mm
+1558004;2014;127,5;kappa > 0,50;2450058;1986;74;kappa > 0,50;2253002;2018;1555,4;Precipitação > 700 mm
+1558004;2015;75,4;kappa > 0,50;2450058;1987;50;kappa > 0,50;2346117;1969;743;Precipitação > 700 mm
+1558004;2016;77,9;kappa > 0,50;2450058;1988;50,2;kappa > 0,50;2346117;1970;792;Precipitação > 700 mm
+1558004;2017;90;kappa > 0,50;2450058;1989;50;kappa > 0,50;2346117;1972;908;Precipitação > 700 mm
+1558004;2019;224,2;kappa > 0,50;2450058;1990;50;kappa > 0,50;2346117;1973;774;Precipitação > 700 mm
+1558004;2020;70;kappa > 0,50;2450058;1991;390;kappa > 0,50;2350033;2018;1555,4;Precipitação > 700 mm
+1558004;2021;79,9;kappa > 0,50;2450058;1992;50;kappa > 0,50;2350063;2018;1555,4;Precipitação > 700 mm
+1644033;2001;88,3;kappa > 0,50;2450058;1993;50;kappa > 0,50;2351004;2018;1999,8;Precipitação > 700 mm
+1644033;2002;76,5;kappa > 0,50;2450058;1994;50;kappa > 0,50;2351013;1976;999,7;Precipitação > 700 mm
+1644033;2003;38;kappa > 0,50;2450058;1995;50;kappa > 0,50;2351031;2018;1555,4;Precipitação > 700 mm
+1644033;2004;75,2;kappa > 0,50;2450058;1996;112,1;kappa > 0,50;2352029;2018;1555,4;Precipitação > 700 mm
+1644033;2005;87;kappa > 0,50;2450058;1997;135,7;kappa > 0,50;2352035;2018;1555,4;Precipitação > 700 mm
+1644033;2006;81;kappa > 0,50;2450058;1998;71,2;kappa > 0,50;2353031;2018;1555,4;Precipitação > 700 mm
+1644033;2007;47,5;kappa > 0,50;2450058;1999;81,3;kappa > 0,50;2449020;2018;777,7;Precipitação > 700 mm
+1644033;2008;64,5;kappa > 0,50;2450058;2000;70,9;kappa > 0,50;2450052;2018;1555,4;Precipitação > 700 mm
+1644033;2009;73,5;kappa > 0,50;2450058;2001;77,1;kappa > 0,50;2452000;2018;1555,4;Precipitação > 700 mm
+1644033;2011;97;kappa > 0,50;2450058;2002;52,8;kappa > 0,50;2452012;2018;1555,4;Precipitação > 700 mm
+1644033;2012;70;kappa > 0,50;2450058;2003;64,7;kappa > 0,50;2452014;2018;999,9;Precipitação > 700 mm
+1644033;2013;65,3;kappa > 0,50;2450058;2012;111,9;kappa > 0,50;2452019;2018;1999,8;Precipitação > 700 mm
+1644033;2014;71;kappa > 0,50;2450058;2014;78,3;kappa > 0,50;2453010;2018;1555,4;Precipitação > 700 mm
+1644033;2015;75,8;kappa > 0,50;2450058;2018;89;kappa > 0,50;2453037;2018;1999,8;Precipitação > 700 mm
+1644033;2016;70;kappa > 0,50;;;;;2454012;2018;1555,4;Precipitação > 700 mm
+1644033;2018;81,5;kappa > 0,50;;;;;2549103;2007;802,4;Precipitação > 700 mm
+1644033;2019;55;kappa > 0,50;;;;;2551000;2016;1555,4;Precipitação > 700 mm
+1644033;2021;75;kappa > 0,50;;;;;2552026;2018;1999,8;Precipitação > 700 mm
+1743018;2000;69,5;kappa > 0,50;;;;;2552047;2018;1999,8;Precipitação > 700 mm
+1743018;2001;99,7;kappa > 0,50;;;;;2553007;2018;1999,8;Precipitação > 700 mm
+1743018;2002;102,3;kappa > 0,50;;;;;2553041;2018;1555,4;Precipitação > 700 mm
+1743018;2003;74,6;kappa > 0,50;;;;;2554013;2018;1555,4;Precipitação > 700 mm
+1743018;2005;98,1;kappa > 0,50;;;;;2554023;2018;999,9;Precipitação > 700 mm
+1743018;2006;70,7;kappa > 0,50;;;;;2651013;2018;1999,8;Precipitação > 700 mm
+1743018;2007;98,2;kappa > 0,50;;;;;2653024;2018;1999,8;Precipitação > 700 mm
+1743018;2008;73;kappa > 0,50;;;;;2849002;2002;2300;Precipitação > 700 mm
+1743018;2009;103;kappa > 0,50;;;;;8068000;1974;999,7;Precipitação > 700 mm
+1743018;2010;43,7;kappa > 0,50;;;;;;;;
+1743018;2011;69;kappa > 0,50;;;;;;;;
+1743018;2013;100;kappa > 0,50;;;;;;;;
+1743018;2014;89,4;kappa > 0,50;;;;;;;;
+1743018;2015;119,4;kappa > 0,50;;;;;;;;
+1743018;2016;54,9;kappa > 0,50;;;;;;;;
+1743018;2017;66,9;kappa > 0,50;;;;;;;;
+1743018;2018;103,1;kappa > 0,50;;;;;;;;
+1743018;2021;100,9;kappa > 0,50;;;;;;;;

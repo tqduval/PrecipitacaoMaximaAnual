@@ -1,0 +1,63 @@
+---
+title: Explore Annual Maximum daily Precipitation in Brazil
+author: To be defined
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+Read a clean version of data:
+
+```{r}
+# Code written by Thiago Lappicy with comments by Dirceu Reis
+
+# Extract metadata only (first 15 lines)
+Pd_metadata <-
+  read.csv("DADOS_CONV_SAULO.dat", header = FALSE, sep = ";",
+           nrows = 15, dec = ".",na.strings = "null",
+           fileEncoding = "latin1")
+
+# Extract Dates and Annual Maximum Daily Precipitation (20th to 112nd lines)
+Pd_tmp <-
+  read.csv("DADOS_CONV_SAULO.dat", header = TRUE, sep = ";",
+           skip = 20, dec = ".", na.strings = "null")
+
+# Create an empty dataframe with the correct columns
+Pd <- as.data.frame(matrix(data = NA, nrow = 0, ncol = 17))   
+
+# Name the columns
+colnames(Pd) <- c("Date", "Pdmax", Pd_metadata[,1])
+
+# Combine both dataframes with only one column for "Data" and one for "Pdmax"
+# Obs: the original file contains one column in excess. That is why we use 
+# "to = ncol(Pd_metadata) - 1" in the function "seq" below
+
+for(i in seq(from = 1, to = ncol(Pd_metadata) - 1, by = 2)){
+  
+  # Printar uma mensagem a cada 500 estações pra ter certeza que ta rodando
+  if((i+1) %% 500 == 0) cat("Rodando iteração: ", i+1, "...\n")
+  
+  # Include the metadata contained in Pd_metadata
+  # Get only the second column of station "i" and transpose the whole column
+  # so it becomes a line with metadata
+  metadata_proxy <- as.data.frame(t(Pd_metadata[,(i+1)])) 
+  # Copy metadata to all possible observations (max.number.observations = 112)
+  metadata_proxy[1:112,] <- metadata_proxy
+  # Name the column
+  colnames(metadata_proxy) <- Pd_metadata[,1]
+  
+  # Include the annual maximum daily Precip and Date (Date + Pdmax + Metadata)
+  Pd[(nrow(Pd)+1):(nrow(Pd)+nrow(Pd_tmp)),] <-
+    cbind(Pd_tmp[,c(i, i+1)], metadata_proxy)
+  
+}
+
+
+# Zerar as linhas que tem valores NAs de Data E valor (2 terços +-)
+# 425600 pra 156529
+Pd <- Pd[-which(is.na(Pd$Pdmax) & is.na(Pd$Date)),]
+
+```
+
