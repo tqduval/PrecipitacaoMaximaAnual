@@ -1,0 +1,27 @@
+{
+    "id": "CF527E68",
+    "path": "C:/Users/Tomas/OneDrive/1 - Acadêmico/Mestrado/Tese/R/Precipitacão Máxima Anual/PrecipitacaoMaximaAnual/2_Ajuste.R",
+    "project_path": "2_Ajuste.R",
+    "type": "r_source",
+    "hash": "1838794181",
+    "contents": "",
+    "dirty": false,
+    "created": 1740678658769.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "268,67",
+        "scrollLine": "216",
+        "docOutlineVisible": "1"
+    },
+    "folds": "91|28|164|0|\n233|23|258|0|\n",
+    "lastKnownWriteTime": 1740773416,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1740773416291,
+    "read_only": false,
+    "read_only_alternatives": []
+}

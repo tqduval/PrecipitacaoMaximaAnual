@@ -1,0 +1,27 @@
+{
+    "id": "91452C0C",
+    "path": "C:/Users/Tomas/OneDrive/1 - Acadêmico/Mestrado/Tese/R/Precipitacão Máxima Anual/PrecipitacaoMaximaAnual/0_Funcoes.R",
+    "project_path": "0_Funcoes.R",
+    "type": "r_source",
+    "hash": "1066361031",
+    "contents": "",
+    "dirty": false,
+    "created": 1740680750515.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "cursorPosition": "159,129",
+        "scrollLine": "73"
+    },
+    "folds": "10|24|20|0|\n25|23|35|0|\n46|23|69|0|\n77|24|124|0|\n129|23|153|0|\n257|37|261|0|\n264|41|268|0|\n284|24|315|0|\n322|38|373|0|\n330|23|351|2|\n377|28|383|0|\n385|28|391|0|\n398|38|403|0|\n406|45|412|0|\n417|29|426|43|\n428|30|438|43|\n",
+    "lastKnownWriteTime": 1740773413,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1740773413633,
+    "read_only": false,
+    "read_only_alternatives": []
+}
