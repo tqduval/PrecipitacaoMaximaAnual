@@ -1,0 +1,26 @@
+{
+    "id": "A97C51D5",
+    "path": "C:/Users/tomas/OneDrive/1 - Acadêmico/Mestrado/Tese/3-R/Precipitacão Máxima Anual/PrecipitacaoMaximaAnual/3_Quantis.R",
+    "project_path": "3_Quantis.R",
+    "type": "r_source",
+    "hash": "3880609823",
+    "contents": "",
+    "dirty": false,
+    "created": 1742998128968.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "216,70",
+        "scrollLine": "173"
+    },
+    "folds": "18|36|67|0|\n40|26|54|4|\n74|27|149|0|\n",
+    "lastKnownWriteTime": 1743003574,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1743003574853,
+    "read_only": false,
+    "read_only_alternatives": []
+}

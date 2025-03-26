@@ -198,9 +198,9 @@ fun.gl.beta.gev <- function(param0,        # vetor c/ os parâmetros, 1. csi 2. 
     }
   }
   
-  if(abs(kappa) > a){
-    ln.GL <- 1e6
-  }
+  # if(abs(kappa) > a){
+  #   ln.GL <- 1e6
+  # }
   
   if(alpha < 0){
     ln.GL <- 1e6
@@ -278,6 +278,82 @@ fun.priori.normal <- function(x, mu, sd){
 
 # O optimx retorna um data.frame c/ colunas 'p1' a 'pk' parâmetros e o valor mínimo (máximo) 'value' encontrado por cada método de otimização (linhas)
 
+# Máxima verossimilhança (ML) -> tentativa de juntar todas as maximizações em uma única função
+# Ainda não está pronta -> adicionar argumentos adicionais
+fun.max.l <- function(param = c(NULL, NULL, NULL), # vetor vazio c/ 3 valores na ordem 1. csi 2. alpha 3. kappa
+                      xp,                          # vetor c/ série AM observada
+                      dist = "gev",                # "gev" ou "gumbel"
+                      generalizada = FALSE        # aplicar a verossimilhança generalizada ou não à GEV
+                      ){
+  
+  # Pacotes
+  p_load(pacman, optimx, dplyr)
+  
+  # Testar qual distribuição maximizar
+  if(dist == "gev"){
+    
+    if(generalizada == FALSE){
+      
+      max.l <-
+        optim(par = param,
+              fn = fun.l.gev,
+              hessian = TRUE,
+              xp = xp) %>% {
+                # Organizar resultados finais
+                tibble(csi = .$par[1],
+                       alpha = .$par[2],
+                       kappa = .$par[3],
+                       value = -(.$value),
+                       hess = list(as_tibble(.$hessian)))}
+      
+    }
+    
+    if(generalizada == TRUE){
+      
+      # Verificar se |kappa| > 0.5, caso sim, substituir pela média da distribuição a priori de Martins e Stedinger
+      if(abs(param[3]) > 0.5) param[3] <- media.kappa
+      
+      # Otimização
+      max.gl <- optim(par = param,
+                      fn = fun.gl.beta.gev,
+                      hessian = TRUE,
+                      media.kappa = media.kappa,
+                      desvpad.kappa = desvpad.kappa,
+                      xp = xp) %>% {
+                        # Extração dos resultados
+                        tibble(csi = .$par[1],
+                               alpha = .$par[2],
+                               kappa = .$par[3],
+                               value = -(.$value),
+                               hess = list(as_tibble(.$hessian)))}
+      
+    }
+    
+  } else{
+    
+    if(dist == "gumbel"){
+      
+      max.l <-
+        optim(par = param,
+              fn = fun.l.gu,
+              hessian = TRUE,
+              xp = xp) %>% {
+                # Organizar resultados finais
+                tibble(csi = .$par[1],
+                       alpha = .$par[2],
+                       value = -(.$value),
+                       hess = list(as_tibble(.$hessian)))}
+      
+    } else{errorCondition(message = " Escolha 'gumbel' ou 'gev'.")}
+    
+  }
+  
+  max.l <- unique(max.l)
+  
+  return(max.l)
+  
+}
+
 # Máxima verossimilhança (ML)
 fun.max.l <- function(param = c(NULL, NULL, NULL), # vetor vazio c/ 3 valores na ordem 1. csi 2. alpha 3. kappa
                       xp,                          # vetor c/ série AM observada
@@ -290,35 +366,48 @@ fun.max.l <- function(param = c(NULL, NULL, NULL), # vetor vazio c/ 3 valores na
   # Testar qual distribuição maximizar
   if(dist == "gev"){
     
-    
-    max.l <- optimx::optimx(param, fun.l.gev, method = c("Nelder-Mead", "BFGS", "L-BFGS-B"), xp = xp) %>%
-      slice_min(value) %>%             # pega somente a linha com a menor (maior) verossimilhança
-      select(csi, alpha, kappa, value) # pega só os parâmetros e o valor do máximo
-    
+    max.l <-
+      optim(par = param,
+            fn = fun.l.gev,
+            hessian = TRUE,
+            xp = xp) %>% {
+              # Organizar resultados finais
+              tibble(csi = .$par[1],
+                     alpha = .$par[2],
+                     kappa = .$par[3],
+                     value = -(.$value),
+                     hess = list(as_tibble(.$hessian)))}
     
   } else{
     
     if(dist == "gumbel"){
       
-      
-      max.l <- optimx::optimx(param, fun.l.gu, method = c("Nelder-Mead", "BFGS", "L-BFGS-B"), xp = xp) %>%
-        slice_min(value) %>%      # pega somente a linha com a menor (maior) verossimilhança
-        select(csi, alpha, value) # pega só os parâmetros e o valor do máximo
+      max.l <-
+        optim(par = param,
+              fn = fun.l.gu,
+              hessian = TRUE,
+              xp = xp) %>% {
+                # Organizar resultados finais
+                tibble(csi = .$par[1],
+                       alpha = .$par[2],
+                       value = -(.$value),
+                       hess = list(as_tibble(.$hessian)))}
       
     } else{errorCondition(message = " Escolha 'gumbel' ou 'gev'.")}
     
   }
   
-  max.l$value <- -max.l$value # corrige sinal do máximo
+  max.l <- unique(max.l)      # força a retornar somente uma linha, caso não haja otimização
+  # max.l$value <- -max.l$value # corrige sinal do máximo
   
   return(max.l)
   
 }
 
+# Ver depois se não da pra fazer uma função de maximizaçao única
 # Máxima verossimilhança generalizada
 fun.max.gl <- function(param = c(NULL, NULL, NULL),
                        xp,
-                       priori = "beta",
                        media.kappa,
                        desvpad.kappa){
   
@@ -328,47 +417,20 @@ fun.max.gl <- function(param = c(NULL, NULL, NULL),
   # Verificar se |kappa| > 0.5, caso sim, substituir pela média da distribuição a priori de Martins e Stedinger
   if(abs(param[3]) > 0.5) param[3] <- media.kappa
   
-  if(priori == "beta"){
-    
-    # Otimizador p/ Beta
-    max.optimx <-
-      optimx::optimx(param, 
-                     fun.gl.beta.gev,
-                     method = c("Nelder-Mead", "BFGS", "L-BFGS-B"),
-                     xp = xp,
-                     media.kappa = media.kappa,
-                     desvpad.kappa = desvpad.kappa)
-    
-    # Organizar o data.frame de saída
-    max.gl <- data.frame(
-      csi = max.optimx$csi[which(max.optimx$value == min(max.optimx$value))],
-      alpha = max.optimx$alpha[which(max.optimx$value == min(max.optimx$value))],
-      kappa = max.optimx$kappa[which(max.optimx$value == min(max.optimx$value))],
-      value = min(max.optimx$value),
-      hess = nest(tibble(
-        attributes(max.optimx)$details[which(max.optimx[, 4] == min(max.optimx[, 4])), "nhatend"][[1]]))) %>% 
-      rename("hess" = "data")
-    
-  } else{
-    
-    # Descartar 
-    if(priori == "normal"){
-      
-      # Otimizador p/ Normal
-      max.gl <- optimx::optimx(param, 
-                               fun.gl.normal.gev,
-                               method = c("Nelder-Mead", "BFGS", "L-BFGS-B"),
-                               xp = xp,
-                               media.kappa = media.kappa,
-                               desvpad.kappa = desvpad.kappa) %>%
-        slice_min(value) %>%             # pega somente a linha com a menor (maior) verossimilhança
-        select(csi, alpha, kappa, value) # pega só os parâmetros e o valor do máximo
-      
-    } else {errorCondition(message = "beta ou normal")}
-  }
-  
-  max.gl$value <- -max.gl$value # corrige sinal do máximo
-  
+  # Otimização
+  max.gl <- optim(par = param,
+                 fn = fun.gl.beta.gev,
+                 hessian = TRUE,
+                 media.kappa = media.kappa,
+                 desvpad.kappa = desvpad.kappa,
+                 xp = xp) %>% {
+                   # Extração dos resultados
+                   tibble(csi = .$par[1],
+                          alpha = .$par[2],
+                          kappa = .$par[3],
+                          value = -(.$value),
+                          hess = list(as_tibble(.$hessian)))}
+
   return(max.gl)
   
 } # retorna um dataframe com 5 colunas: csi, alpha, kappa, value e hess
@@ -378,7 +440,7 @@ fun.max.gl <- function(param = c(NULL, NULL, NULL),
 fun.tao3 <- function(kappa){
   
   tao3 <- 2*(1 - 3^(-kappa))/(1 - 2^(-kappa)) - 3
-  
+   
   return(tao3)
   
 }
