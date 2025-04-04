@@ -253,20 +253,19 @@ fun.gl.normal.gev <- function(param0,        # vetor c/ os parâmetros, 1. csi 2
 
 # PRIORIS -----------------------------------------------------------------
 
-# Distribuições a priori p/ serem plotadas c/ ggplot2
+# Distribuições a priori p/ serem plotadas c/ ggplot2po
 # Priori Beta
-fun.priori.beta <- function(x, p, q){
+fun.priori.beta <- function(x, a = 0.5, mu, sd){
   
-  (0.5 + x)^(p-1)*(0.5 - x)^(q-1)/(beta(p,q))
+  b <- mu + a
+  p <- b^2*(1 - b)/(sd^2) - b
+  q <- p*(1/b - 1)
+  
+  fx <- (a + x)^(p - 1)*(a - x)^(q - 1)/(beta(p,q))
+  
+  return(fx)
   
 } # sinais normais
-
-# Priori Normal
-fun.priori.normal <- function(x, mu, sd){
-  
-  1/(sd*sqrt(2*pi))*exp(-1/2*((-x-mu)/sd)^2)
-  
-} # expressão da fdp normal com sinal de kappa invertido
 
 
 # MAXIMIZAÇÃO ------------------------------------------------------------------

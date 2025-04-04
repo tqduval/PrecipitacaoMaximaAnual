@@ -1,6 +1,7 @@
 
 # PACOTES -----------------------------------------------------------------
 
+# Muitos não estão sendo utilizados → organizar depois
 pacman::p_load(pacman, tidyverse, lubridate, lmom, optimx, beepr, ggplot2, sf, moments, patchwork,
                doParallel, foreach, progressr, pbapply,
                purrr # pacote p/ usar a função pmap no cáuculo das variâncias dos quantis
@@ -67,151 +68,201 @@ fun.var.q <- function(p, par, hess){
   
 }
 
-# Process all stations (only gl.gev model at the moment)
-# This function structures a tibble for a single station at a time
-fun.quantile <- function(df,               # data.frame with fitted parameters (df.param)
-                         tempo.retorno,    # vector of return periods to estimate quantiles
-                         alpha.ic = 0.05   # significance level for quantile confidence intervals
-                         ){
+
+# VERSÃO P/ TODOS OS MODELOS ----------------------------------------------------------
+
+# Turn df.param into long table
+# Ainda não está sendo usado p/ nada
+df.param_long <- ({
+  df.param %>% 
+    select(estacao, n.serie, bacia, sub.bacia, starts_with("par"), starts_with("hess")) %>% 
+    pivot_longer(
+      cols = c(starts_with("par."), starts_with("hess.")),
+      names_to = c("type", "model"),
+      names_pattern = "(par|hess)\\.(.*)",
+      values_to = "value"
+    ) %>%
+    pivot_wider(
+      names_from = type,
+      values_from = value
+    )
+})
+
+# Testar depois fun.q.process.all olhando pra df.param normal
+# a função calcula procura os nomes padronizados das colunas em df.param p/ saber qual modelo usar
+fun.q.process.all <- function(df,
+                              tempo.retorno,
+                              alpha.ic = 0.05,
+                              model = c("lmom.gu", "lmom.gev", "l.gu", "l.gev", "gl.gev")
+                              ){
+  
+  # Timer
+  start.time <- Sys.time()
   
   # Initial information
-  estacao <- df$estacao        # gauge codes
-  n.estacao <- length(estacao) # number of stations
-  p <- 1 - 1/tempo.retorno     # probabillity of non-exceedance -> vector if length(return.period) > 1
-  n.p <- length(p)             # lenght of probabilities vector
+  estacoes <- unique(df$estacao)
+  n.estacoes <- length(estacoes)
+  p <- 1 - 1/tempo.retorno
+  n.p <- length(p)
   
-  # GEV-GML parameters
-  par <- unlist(df$par.gl.gev) # parameter vector is listed
-  n.par <- length(par)         # number of distribution parameters
-  csi <- par[1]                # extract GEV location parameter
-  alpha <- par[2]              # extract GEV scale parameter
-  kappa <- par[3]              # extract GEV shape parameter
+  # Start resulting table
+  df.q <- tibble()
   
-  # Quantiles
-  q <- fun.q.gev(p, param = par)
-  
-  # Hessian matrix extraction and uncertainty estimation by the Delta Method
-  tryCatch({
+  # Loop through stations
+  for(est in estacoes){
     
-    # Extract hessian and turn it back into square matrix
-    hess <- df$hess.gl.gev %>% unlist %>% matrix(ncol = n.par, nrow = n.par, byrow = TRUE)
+    cat("\nEstação", est, "em processamento...")
     
-    # Inverse hessian matrix (covariance matrix) -> if error, variance will be NA
-    cov.par <- tryCatch(solve(hess), error = function(e){
+    # Set current station
+    df.current <- df %>% filter(estacao == est)
+    series.length <- df.current$n.serie
+    
+    # Loop through models to determine which should be calculated
+    for(mod in model){
       
-      message(sprintf("\nUnable to inverse Hessian for station %s: %s", estacao, e$message))
-      matrix(NA, nrow = n.par, ncol = n.par)
+      # Extract parameter vector for the current model
+      par.col <- paste0("par.", mod)
+      
+      # Check if the column exists
+      if(!par.col %in% names(df.current)){
+        message(sprintf("Station %s: column %s not found. Skipping model %s.", est, par.col, mod))
+        next
+      }
+      
+      # Unlist parameters if the column exists and extract them
+      par <- unlist(df.current[[par.col]])
+      n.par <- length(par) # number of parameters for the current distribution
+      
+      # Select appropriate quantile function and extract parameters
+      if(grepl("gu", mod)){ # check for the distribution suffix in the model name
         
-      })
-    
-    var.q <- rep(NA, n.p)  # create empty variance matrix
-    
-    # Calculate, for each p, partials, gradient matrix, and quantile variance vector
-    for(i in 1:n.p){
+        # Extract parameters
+        csi <- par[1]
+        alpha <- par[2]
+        
+        # Quantiles
+        q <- fun.q.gu(p, param = par)
+        
+      } else {               # if it's not Gumbel, then use the GEV quantile function
+        
+        # Extract parameters
+        csi <- par[1]
+        alpha <- par[2]
+        kappa <- par[3]
+        
+        # Quantiles
+        q <- fun.q.gev(p, param = par)
+        
+      }
       
-      # Quantile partials in relation to each GEV parameter
-      d.csi <- 1                                                                # dq/dξ
-      d.alpha <- 1/kappa*(1 - (-log(p[i]))^kappa)                               # dq/dα
-      yp <- -log(p[i])                                                          # simplifying dq/dκ expresison
-      d.kappa <- -alpha/(kappa^2)*(1 - yp^kappa) - alpha/kappa*yp^kappa*log(yp) # dq/dκ
+      # Estimate uncertainty using the Delta Method -> only for Maximum Likelihood models
+      # Set NA for lmom models
+      if(mod %in% c("l.gu", "l.gev", "gl.gev")){
+        
+        # Extract hessian
+        hess.col <- paste0("hess.", mod)
+        if(!hess.col %in% names(df.current)){
+          
+          message(sprintf("Station %s: hessian column %s not found. Skipping uncertainty estimation for model %s.", est, hess.col, mod))
+          
+          # Set columns to NA
+          sd.q <- rep(NA, n.p)
+          ic.l <- rep(NA, n.p)
+          ic.u <- rep(NA, n.p)
+          
+        } else {
+          
+          # If the hessian column exists, then estimate quantile variance
+          # Extract and invert hessian matrix
+          hess <- df.current[[hess.col]] %>% unlist %>% matrix(ncol = n.par, nrow = n.par, byrow = TRUE) # extract hessian for current model
+          cov.q <- tryCatch(
+            solve(hess),
+            error = function(e){
+              message(sprintf("\nStation %s: hessian is null as the station was not optimized in model %s → %s", est, mod, e$message))
+              matrix(NA, nrow = length(par), ncol = length(par))
+            })
+          
+          # Calculate variance via the Delta Method
+          var.q <- rep(NA, n.p) # create empty vector
+          for(prob in seq_along(p)){
+            
+            # Structure gradient matrix depending on the distribution
+            if(grepl("gev", mod)){
+              
+              d.csi <- 1                                                                # dq/dξ
+              d.alpha <- 1/kappa*(1 - (-log(p[prob]))^kappa)                               # dq/dα
+              yp <- -log(p[prob])                                                       # to simplify dq/dκ expression
+              d.kappa <- -alpha/(kappa^2)*(1 - yp^kappa) - alpha/kappa*yp^kappa*log(yp) # dq/dκ
+              
+              grad.q <- c(d.csi, d.alpha, d.kappa)
+              
+            }
+            
+            if(grepl("gu", mod)){
+              
+              d.csi <- 1                     # dq/dξ
+              d.alpha <- -log(-log(p[prob])) # dq/dα
+              
+              grad.q <- c(d.csi, d.alpha)
+              
+            }
+            
+            # Variance
+            var.q[prob] <- t(grad.q) %*% cov.q %*% grad.q
+            
+          }
+          
+          # Estimate confidence intervals
+          sd.q <- sqrt(var.q)               # quantile standard deviation
+          delta.ci <- qnorm(1 - alpha.ic/2) # standard normal quantile for given confidence level
+          ic.l <- q - delta.ci*sd.q         # lower limit of CI
+          ic.u <- q + delta.ci*sd.q         # upper limit of CI
+          
+        }
+        
+      } else {
+        
+        # For lmom models: uncertainty values are not estimated
+        sd.q <- rep(NA, n.p)
+        ic.l <- rep(NA, n.p)
+        ic.u <- rep(NA, n.p)
+        
+      }
       
-      # Vetor gradiente
-      grad.q <- c(d.csi, d.alpha, d.kappa) # matriz coluna 3x1
+      # Organize results for current station and model
+      df.q.aux <- tibble(estacao = rep(est, n.p),
+                         n.serie = rep(series.length, n.p),
+                         model = mod,
+                         tempo.retorno = tempo.retorno,
+                         q = q,
+                         sd.q = sd.q,
+                         ic.l = ic.l,
+                         ic.u = ic.u)
       
-      # Variância do quantil
-      var.q[i] <- t(grad.q) %*% cov.par %*% grad.q
+      # Combine results
+      df.q <- rbind(df.q, df.q.aux)
       
-    }
+    } # end model loop
     
-  }, error = function(e){
-    
-    message(sprintf("\nStation %s: Hessian inversion failed - %s", estacao, e$message))
-    var.q <- NA
-    
-  })
+  } # end station loop
   
-  # Confidence intervals - CI
-  delta.ci <- qnorm(p = 1 - alpha.ic/2, 0, 1) # standard normal quantile
-  sd.q <- sqrt(var.q)                         # quantile standard deviation
-  ic.l <- q - delta.ci*sd.q                   # CI's lower limit
-  ic.u <- q + delta.ci*sd.q                   # CI's upper limit
-  
-  # Resulting tibble
-  res <- tibble(estacao = rep(estacao, n.p), # repeat gauge number for n.p rows
-                tr = tempo.retorno,
-                hess = list(tibble(hess)),
-                q = q,
-                sd.q = sd.q,
-                ic.l = ic.l,
-                ic.u = ic.u)
-  
-  return(res)
-  
-}
-
-# This funcion loops through all stations running fun.quantile,
-# binding each stations tibble together to strucure the resulting tibble
-fun.quantile.process <- function(df,
-                                 tempo.retorno,
-                                 alpha.ic = 0.05){
-  
-  # Load packages
-  pacman::p_load(pacman, dplyr, beepr)
-  
-  # Start timer
-  start.time <- Sys.time()
-
-  # List gauges
-  estacoes <- df$estacao          # vector of all stations
-  n.estacoes <- length(estacoes)  # number of stations
-  
-  tryCatch({
-    
-    # Start resulting tibble
-    df.q <- tibble()
-    
-    # Run fun.quantile for all gauges to estimate quantiles and confidence intervals
-    for(i in seq_along(estacoes)){
-
-      # Select only the current station
-      df.estacao <- df %>% filter(estacao == estacoes[i])
-      
-      # Run fun.quantile for current station
-      df.proxy <- fun.quantile(df = df.estacao, tempo.retorno, alpha.ic = alpha.ic)
-
-      # Combine with previous processed stations
-      df.q <- bind_rows(df.q, df.proxy)
-
-      cat("\nEstação", estacoes[i], "processada →", round(i/n.estacoes*100, 2), "%")
-
-    }
-    
-  }, error = function(e){
-    
-    message(e$message)
-    
-  })
-  
-  # Processing time message
+  # Processing time and message
   procss.time <- round(difftime(Sys.time(), start.time, units = "mins"), 1)
-  message(sprintf("\nProcessamento concluído!\n%d quantis calculados de %d\nDuração: %s min",
-                  nrow(df.q), n.estacoes*length(tempo.retorno), procss.time))
-  beep(sound = 10)
+  message(sprintf("\nProcessing complete!\nStations processed: %d\nDuration: %s min", n.estacoes, procss.time))
+  beep(sound = 10) # sound alert
+  gc()             # clean memory
   
   return(df.q)
   
 }
 
+# Tempos de retorno
 tempo.retorno <- c(10.0, 20.0, 50.0, 100.0, 200.0, 500.0)
 
-# Testing fun.quantile for a single station
 teste.quantil <- 
   df.param %>% 
-  filter(estacao == 2147001) %>% 
-  fun.quantile(tempo.retorno = tempo.retorno, alpha.ic = 0.05)
-
-# Aplicação da função fun.quantile.process
-df.quantiles <- 
-  df.param %>% 
-  # filter(estacao %in% c(57000, 47002, 2147001, 147010)) %>% 
-  fun.quantile.process(tempo.retorno = tempo.retorno, alpha.ic = 0.05)
+  # filter(estacao == 57000) %>%
+  # filter(estacao %in% c(47002, 47003, 57000)) %>%
+  # head(20) %>% 
+  fun.q.process.all(tempo.retorno = tempo.retorno,
+                    alpha.ic = 0.05)
