@@ -1,0 +1,537 @@
+---
+title: "Subdaily_RS_All_Years"
+format: html
+editor: visual
+---
+
+## Introduction
+
+This Quarto script was written to transfer `HDF` files from subdaily rainfall data in the state of Rio Grande do Sul (Brazil) gathered by different brazilian entities and processed by a team at UFPB (Universidade Federal da Paraíba).
+
+In the link [IDF RS](https://nrennie.rbind.io/blog/combining-r-and-python-with-reticulate-and-quarto/) there can be found more information about the effort, as well as the data used here.
+
+Our goal here is to read this data and turn it into R tibbles for later use.
+
+## Data
+
+The data regarding subdaily observations is available, as said above, in the `HDF` file format for large datasets divided by year (from 2001 to 2024) in different files names `RS_<year>.h5`. Inside each of these datasets there are two tables:
+
+-   `table_info` has information about the set of subdaily rain gauges within that given year: gauge code, location (longitude and latitude), elevation, state and city where the station is located, entity responsible for the gauges operation, from which network the data is from and the rainfall monitoring time step. This information is given separately from the rainfall data itself to avoid many rows with the same information repeating for the same gauge; and
+
+-   `table_data`, which has the rainfall data itself, connected to `table_info` by the same gauge code attribute, as well as the time and date of every observation.
+
+## Packages -- working with Python and R
+
+### R
+
+In this section we load packages from R, define a Python environment (anaconda3 in this case) and load Python packages. The `reclusive` R package will allow us to install Python packages `pandas`, `glob` and `os`, as well as access and transfer data generated between both Python and R environments using `py$` to access from Python to R and `r.` to do the oposite.
+
+It can get tricky working with Python as there are many variables to work with and many possibilities. The way some might recommend is to use environments when working with Python. To each project we create a new environment to avoid conflicts between different projects that we added different packages and Python versions. For exemple, for this task of reading our rainfall files we can go to our command line (here we are using **Git Bash**) and type `conda init bash` to initialize our command line to run anaconda. Once that's done, we can close Git Bash and reopen it so our new base is the anaconda Python environment.
+
+Now, we can create an environment specifc to our project, so we might use `conda create --name env_idf` (and so our environment will be called `env_idf`) and subsequently activate it using `conda activate env_idf`. Inside this environment we can install our packages, and even another Python version different than the original one from our Anaconda instalation. To do so, we type `conda install python`.
+
+Other auxiliary command lines can be use when we want to check where we've installed someting:
+
+-   `conda list` shows us what's already installed in our current environment;
+
+-   `which python` shows is what is our current environment; and
+
+-   `python --version` shows us what Python version is installed in our environment.
+
+When we are done setting up our environment, we can beging to install the packages we'll use using the `conda` or `pip` Python package managers, which both follow the same structure: `conda install <package_name>` and `pip install <package_name>`. However, for the purpose of this video, we will do the package instalation using the `reclusive` R package mentioned in the begining with the `py_install()` function.
+
+In the chunk below, we start by installing and loading our R packages. Then, we define the Python environment we created for this project (`env_idf`) and install our Python packages.
+
+```{r}
+# Install and load R packages
+if(!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, reticulate, lubridate, fastmatch, pbapply, beepr, data.table, ggplot2, cowplot)
+
+# Specify the env_idf conda environment
+use_condaenv("C:/Users/<your_name>/anaconda3/env_idf/python.exe", require = TRUE)
+py_config() # check Python version being used
+
+# Install Python packages through R using reticulate::py_install()
+# py_install("pandas") # install 'pandas' package with reticulate package
+# py_install("glob")   # install 'glob' package to read files in specified directory
+# py_install("os")     # install 'os' package to clear temporary files
+py_module_available("pandas") # check to see if pandas is installed
+py_module_available("glob")   # check to see if glob is installed
+py_module_available("os")     # check to see if os is installed
+
+```
+
+A usefull guide we used in our Anaconda installation can be found in this video [Getting started with Anaconda and Python on Windows \| Susan B.](https://youtu.be/4DQGBQMvwZo?si=l6_-kT868NkxBMq4).
+
+### Python
+
+Load installed Python packages.
+
+```{python}
+import pandas as pd
+import glob
+import os
+```
+
+## Read subdaily rainfall data
+
+Using Python, we set the directory where HDF files are and extract only those ending in `.h5`:
+
+```{python}
+subdaily_path = "C:/Users/tomas/OneDrive/1 - Acadêmico/Mestrado/Tese/3-R/Precipitacão Máxima Anual/PrecipitacaoMaximaAnual/Fonte de Dados/Dados_RS/Dados subdiarios consolidados" # tentar puxar direto do OneDrive da UFPB
+subdaily_files = glob.glob(os.path.join(subdaily_path, '*.h5')) # retorna o caminho completo
+```
+
+## Read files with python
+
+Create empty lists to store both `table_data` and `table_info` as dataframes from all years:
+
+```{python}
+# Create empty lists to hold the data from each file
+data_list = {}
+info_list = {}
+
+# Go over each file in subdaily_files
+for file in subdaily_files:
+  # Use file name as key (e.g., "RS_2001.h5")
+  key = os.path.basename(file)
+  # Read data tables from each file and store them in the lists created
+  data_list[key] = pd.read_hdf(file, "table_data")
+  info_list[key] = pd.read_hdf(file, "table_info")
+```
+
+## Turn tables into R dataframes
+
+Now back to R, we use the `py$` preffix to access the dataframes created in the RStudio Python environment and bring them to R.
+
+```{r}
+# Retrieve lists from Python
+data_list <- py$data_list
+info_list <- py$info_list
+
+# Bind rows and turn into single tibble, remove lists and clear cache
+rs_data_table <- as_tibble(bind_rows(data_list)); rm(data_list); py_run_string("del data_list"); gc()
+rs_info_table <- as_tibble(bind_rows(info_list)); rm(info_list); py_run_string("del info_list"); gc()
+```
+
+```{r}
+# View tibbles
+head(rs_data_table, 20)
+head(rs_info_table, 20)
+
+# Get information on the number of gauges available
+nrow(rs_info_table) %>% print()
+```
+
+## Edit tables
+
+Mutate `rs_data_table` to add columns for year and time step
+
+```{r}
+rs_data_table <- 
+  rs_data_table %>% 
+  mutate(time_steps = rs_info_table$monitoring_time_step[match(gauge_code,rs_info_table$gauge_code)]); gc()
+```
+
+As the data was separated by year, the gauges in `table_info` may also very likely be in subsequent years, so there are duplicates. To address that, we extract unique values from `rs_info_table` using the `unique()` function. However, we might also need to make sure that the amount of unique observations in the table is the same as the number of gauges, because some information can change with time.
+
+```{r}
+# Get unique values
+rs_info_table <- unique(rs_info_table)      # return only unique rows (508 observations)
+nrow(rs_info_table)
+unique(rs_info_table$gauge_code) %>% length # return only unique gauge codes (383 observations, the correct amount)
+```
+
+The difference in observations above may indicate that there are duplicate gauge codes in `rs_info_table`, telling us that, despite there being 383 total gauges available, some gauge_code observations in `rs_info_table` might have different attributes. Following are some investigations:
+
+```{r}
+# Check the number of times each gauge code shows up
+duplicate_gauges <-
+  rs_info_table %>% 
+  group_by(gauge_code) %>% 
+  reframe(freq = table(gauge_code), # use table() to see how many times each gauge_code shows up
+          lat = sd(lat),            # use standard deviation to see if there is difference between observations
+          long = sd(long),          # if there isn't, it will return NA
+          elevation = sd(elevation),
+          time_step = sd(monitoring_time_step)) %>%
+  filter(!is.na(elevation) & !is.na(lat) & !is.na(long) & !is.na(time_step)) # remove all NA, keeping only duplicates
+
+# Number of duplicate gauges
+message(sprintf("%d duplicate gauges", sum(duplicate_gauges$freq)))
+
+duplicate_gauges
+```
+
+For now, we can keep only the attributes that appear last for each rain gauge
+
+```{r}
+rs_info_table <- 
+  rs_info_table %>% 
+  group_by(gauge_code) %>% 
+  slice_tail(n = 1)
+```
+
+## Export to RDS
+
+```{r}
+saveRDS(rs_data_table, file = "Dados Gerados/rs_table_data.rds")
+saveRDS(rs_info_table, file = "Dados Gerados/rs_table_info.rds")
+```
+
+## Visualization
+
+### Understanting the data
+
+Here we will check out subdaily timeseries possible gaps. Our aim is to create a new column in `rs_data_table` to quantify the number of "years" missing.
+
+$$
+\text{Gap} = \frac{\text{Difference between observations }-\text{Monitoring time step}}{\text{Monitoring time step}}
+$$
+
+)
+
+```{r}
+# Check for gaps in the timeseries
+rs_data_gaps <-
+  rs_data_table %>% 
+  group_by(gauge_code) %>% 
+  reframe(diff = as.numeric(difftime(time1 = datetime[-1],
+                                     time2 = datetime[-length(datetime)],
+                                     units = "days")),
+          time_steps = mean(time_steps)/1440,
+          gap = diff/time_steps - 1); gc()
+
+total_gap <- 
+  rs_data_gaps %>% 
+  group_by(gauge_code) %>% 
+  summarise(total_gap = sum(gap[gap > 0]))
+
+quantile(total_gap$total_gap, 0.5)
+```
+
+Now we can use ggplot see how much this gaps vary between all different rain gauges.
+
+```{r}
+rs_data_gaps %>% 
+  group_by(gauge_code) %>% 
+  summarise(total_gap = sum(gap[gap > 0])) %>% 
+  filter(total_gap > 40000) %>% 
+  ggplot(aes(x = reorder(gauge_code, total_gap), y = total_gap)) +
+  geom_col(fill = "tomato") +
+  labs(x = "gaps", y = "gauge") +
+  coord_flip() +
+  theme_bw() + 
+  theme(text = element_text(size = 5.5))
+
+ggsave(filename = "Plotagens/Subdaily Gaps.png",
+       height = 291, width = 210, units = "mm", dpi = 300)
+```
+
+Approach filling the timeseries for each raingauge and assessing the number of `NA` values.
+
+```{r}
+# Make a table containing first and last observations dates for each station
+gauge_dates <-
+  rs_data_table %>% 
+  group_by(gauge_code) %>% 
+  summarise(start_date = min(datetime),
+            end_date = max(datetime),
+            .groups = "drop")
+
+head(gauge_dates, 10)
+
+# For each gauge, make a complete timeseries and later join the actual daily acumulate rainfall
+gauge_dates_filled <- 
+  gauge_dates %>% 
+  rowwise() %>% 
+  mutate(start_date = as.Date(start_date),
+         end_date = as.Date(end_date),
+         date = list(seq.Date(start_date, end_date, by = "day"))) %>% 
+  unnest(cols = c(date)) %>% 
+  left_join(
+    rs_data_table %>%
+      mutate(date = as.Date(datetime)) %>% 
+      group_by(gauge_code, date) %>% 
+      summarise(rain_24h = sum(rain_mm), .groups = "drop"),
+    by = c("gauge_code", "date")) %>% 
+  ungroup()
+
+
+```
+
+Now that we have a table that show us all missing days, we can use that to quantify how much of the timeseries lenght is filled with actual data and get a more direct mesurement of failure. Then, as we did before, we can plot this information and assess the amount of gauges with missing data in the dataset.
+
+```{r}
+gauge_dates_summary <- 
+  gauge_dates_filled %>% 
+  group_by(gauge_code) %>% 
+  summarise(series_length = n(),
+            no_data = sum(is.na(rain_24h)),
+            fail_prct = no_data/series_length*100)
+
+gauge_dates_summary[gauge_dates_summary$fail_prct >= 20,] %>% nrow
+
+gauge_dates_summary %>% 
+  filter(fail_prct > 20) %>% 
+  ggplot(aes(x = reorder(gauge_code, fail_prct), y = fail_prct)) +
+  geom_col(fill = "tomato", color = "red3", linewidth = 0.1, width = 0.8) +
+  labs(x = "No data [%]", y = "Gauge", title = "Percentage of NAs") +
+  coord_flip() +
+  theme_minimal() + 
+  theme(panel.background = NULL,
+        plot.background = element_rect(fill = "white", color = "white"),
+        text = element_text(size = 6.5, color = "black"),
+        axis.text.x = element_text(angle = 90))
+
+ggsave(filename = "Plotagens/Porcentagem NA 20prct.pdf",
+       width = 210, height = 297, dpi = 300, units = "mm")
+```
+
+## Adding information
+
+To help us navigate thorugh the data and select only stations that match certain criteria, we can add some information to `rs_table_info`:
+
+-   Number of whole years, that being number of years with less than a certain threshold missing days (say 60 consecutive days) ;
+-   Percentage of gaps found by comparing how many steps (based on the gauges time resolution $\Delta t$) there should be in start to end of the `datatime` column to the acual amount of $\Delta t$ observed.
+
+Para esse fim, vamos montar uma função que, para cada estação, identifique a primeira e última observação e, baseeado na sua resolução temporal $\Delta t$ crie uma nova sequência do primeiro dia do ano da primeira observação até o último dia do ano da última observação a cada $\Delta t$ (assim poderemos descartar automaticamente séries que comecem no final ou terminem no início de um certo ano). Faremos isso utilizando `floor_` e `ceiling_date()` do pacote `lubridate`.
+
+Essa função deverá, em seguida, consultar a tabela original com os dados e buscar a informação de chuva para uma determinada data e retornar `NA` caso não encontre. Para essas consultas utilizaremos a função `fmatch()` do pacote `fastmatch`.
+
+Finalmente, basta pedir ao R que rode a função para todas as estações e temos a função abaixo:
+
+```{r}
+fill_timeseries <- function(df, # data.frame with all stations
+                            col_names = c("gauge_code", "rain_mm", "datetime", "time_steps")
+                            ){
+  
+  # Check if df is a data.frame
+  if(!inherits(df, c("data.frame", "data.table", "tibble"))){
+    stop("Argument 'df' must be a data.frame (data.table or tibble), not a ", class(df), ".")
+  }
+  
+  # Check if names(df) is the same as 'col.names' argument
+  # Essa forma não confere se a ordem é a mesma
+  if(sum(is.element(col_names[1:4], names(df))) != 4){
+    stop("Columns of 'df' are not the same as:\n", paste(col_names[1], col_names[2], col_names[3], col_names[4]))
+  }
+  
+  # Check if 'datetime' column is of POSIX class
+  if(!is.POSIXt(df[[col_names[3]]])){
+    warning("Reminder: 'time_steps' must be in minutes.")
+    stop("Column three must contain date information in POSIXt (ct or lt) format, instead it's ", class(col_names[3]), ".")
+  }
+  
+  # Packages
+  if(!require("pacman")) install.packages("pacman")
+  pacman::p_load(tidyverse, lubridate, fastmatch, beepr, pbapply)
+  
+  # Function to fill gauges time series based on their recording time step
+  fun_fill <- function(df){
+    
+    # Extract gauge code based on the first observation
+    gauge_code <- df[[col_names[1]]][1]
+    
+    # Extract start and end dates
+    date_min <- lubridate::floor_date(min(df[[col_names[3]]]), unit = "year")
+    date_max <- lubridate::ceiling_date(max(df[[col_names[3]]]), unit = "year") - 1
+    
+    # Extract time_steps vector
+    time_step <- unique(df[[col_names[4]]])*60 # convert to seconds to build new date sequence
+    
+    # Build new date sequence
+    seq_date <- seq(from = date_min, to = date_max, by = time_step)
+    
+    # Fill new rainfall sequence by matching date between new sequence and df$datetime
+    seq_rain <- df[[col_names[2]]][fastmatch::fmatch(x = seq_date, table = df[[col_names[3]]])]
+    
+    # Build final table
+    df_filled <- tibble(gauge_code = gauge_code,
+                        datetime = seq_date,
+                        rain_mm = seq_rain,
+                        time_step = time_step)
+    
+    return(df_filled)
+    
+  }
+  
+  # Fill time series
+  list_df <- split(df, df[[col_names[1]]])                      # split df into list    
+  list_filled <- pbapply::pblapply(X = list_df, FUN = fun_fill) # lapply fun_fill with progress bar
+  
+  # Talvez seja interessante agrupar dentro de outra lista por 'time_steps' pra facilitar na hora de rodar a IDF.agg()
+  
+  # Sound alert
+  beepr::beep(sound = 10)
+  gc()
+  
+  return(list_filled)
+  
+}
+
+list_filled <- fill_timeseries(df = rs_data_table)
+saveRDS(object = list_filled, file = "Dados Gerados/list_filled.rds")
+```
+
+Agora que criamos `list_filled`, podemos fazer extrair as informações necessárias que citamos acima a adicioná-las em `rs_info_table`. Inicialmente, usaremos o `dplyr()`. Para calcular a porcentagem de falhas basta contarmos quantas falhas há em determinado ano e dividir do número total de observações nesse determinado ano. Agora para calcular
+
+```{r}
+# Análise por ano
+list_filled <- readRDS("Dados Gerados/list_filled.rds") # ler lista c/ estações
+
+# Definir um limiar para falhas
+fail_threshold <- 20 # %
+miss_days_threshold <- 60 # definir limite máximo
+
+# Gerar um data.frame resumo
+df_summary_yr <-
+  bind_rows(list_filled) %>%
+  arrange(gauge_code, datetime) %>% 
+  mutate(year = lubridate::year(datetime),
+         rain_na = is.na(rain_mm)) %>% 
+  group_by(gauge_code, year) %>% 
+  reframe(rain_yr = sum(rain_mm, na.rm = TRUE),
+          n_fail = sum(rain_na),
+          n_obs = n(),
+          fail_prct = n_fail/n_obs*100,
+          miss_days = any(rle(rain_na)$lengths >= miss_days_threshold)); gc() # ajustar p/ multiplicar pelo delta_t da estação p/ obter em dias
+```
+
+Temos agora um `data.frame` com as informações que queríamos para cada estação (número de dias consecutivos sem dados e porcentagem de falhas por ano) e adicioná-las em `rs_info_table`. Vamos começar filtrando os anos com menos de 20% de falhas, em seguida aqueles com mais de 60 dias consecutivos sem dados. Em seguida, faremos uma comparação antes e depois das estações filtradas.
+
+```{r}
+# Comparar número de anos antes e depois da filtragem
+df_summary_yr_fail <- 
+  df_summary_yr %>% 
+  group_by(gauge_code) %>% 
+  summarise(n_yr_total = n(),
+            n_yr_filter = sum(fail_prct <= fail_threshold, na.rm = TRUE))
+
+# Histograma acumulado comparando a distribuição das estações com determinado número de anos 
+# antes e depois da filtragem dos anos com falhas
+plot_n_yrs <- ({
+  df_summary_yr_fail %>%
+    pivot_longer(cols = starts_with("n_yr_"),
+                 names_to = "which_count",
+                 values_to = "n_years") %>% 
+    ggplot(aes(x = n_years, fill = which_count)) +
+    geom_histogram(position = "identity", color = "black",
+                   alpha    = 0.4,
+                   binwidth = 1) +
+    scale_fill_manual(name   = "",
+                      labels = c("≤ 20% NA years", "All years"),
+                      values = c("#1f77b4", "#ff7f0e")) +
+    annotate(geom = "text", x = 19.5, y = 155, label = paste("Total years:", sum(df_summary_yr_fail$n_yr_total), "\nFiltered years:", sum(df_summary_yr_fail$n_yr_filter)), hjust = 0, vjust = 0, size = 3, family = "serif") +
+    scale_x_continuous(breaks = seq(0, 25, 2)) +
+    labs(x = "N [years]", y = "Number of stations"
+         # ,
+         # title = "Distribution of total and filtered year counts"
+         ) +
+    theme_minimal() +
+    theme(legend.position =  "bottom",
+        plot.background = element_rect(color = "white"),
+        panel.border = element_rect(color = "black", fill = NA),
+        text = element_text(family = "serif"))
+}); plot_n_yrs
+
+ggsave(filename = "Plotagens/Distribuição do número de estações com um dado comprimento.png",
+       plot = plot_n_yrs,
+       width = 12, height = 9, units = "cm", dpi = 300)
+```
+
+Vamos comparar o antes e depois de algumas estações que saíram de vários anos para nenhum.
+
+```{r}
+# Escolher estações
+gauges <- c("430280801A", "430920901A", "A802")
+
+# Plotar séries subdiárias
+list_filled[gauges] %>% 
+  bind_rows %>% 
+  ggplot(aes(x = datetime, y = rain_mm)) +
+  facet_wrap(~gauge_code, dir = "v") +
+  geom_line(color = "blue", linewidth = 0.1) +
+  # geom_col() +
+  # scale_x_continuous(breaks = seq(2000, 2025, 1)) +
+  theme_minimal() +
+  theme(legend.position =  "bottom",
+      plot.background = element_rect(color = "white"),
+      panel.border = element_rect(color = "black", fill = NA),
+      text = element_text(family = "serif"),
+      axis.text.x = element_text(angle = 90))
+
+df_summary_yr %>% 
+  filter(gauge_code %in% gauges) %>% 
+  mutate(rain_yr = replace(rain_yr, rain_yr <= 10, NA)) %>% 
+  ggplot(aes(x = year, y = rain_yr)) +
+  facet_wrap(~gauge_code, dir = "v") +
+  geom_line(color = "blue") +
+  geom_point(colour = "blue" , fill = "white", pch = 21) +
+  scale_x_continuous(breaks = seq(2000, 2025, 1)) +
+  theme_minimal() +
+  theme(legend.position =  "bottom",
+        plot.background = element_rect(color = "white"),
+        panel.border = element_rect(color = "black", fill = NA),
+        text = element_text(family = "serif"),
+        axis.text.x = element_text(angle = 90))
+
+list_filled[["430920901A"]] %>% 
+  filter(lubridate::year(datetime) == 2020) %>% 
+  ggplot() +
+  geom_line(aes(x = datetime, y = rain_mm)) +
+  geom_col()
+
+pacman::p_load(pacman, imputeTS)
+
+imputeTS::ggplot_na_distribution(list_filled[["430920901A"]][3])
+```
+
+Por fim, vamos analisar a a distribuição do tamanho das séries conforme alteramos o `fail_threshold`. Vamos começar de 10% até 50% de falhas, contando o número de estações com pelo menos 5, 8 e 10 anos. Para isso, podemos construir uma tabela rodando 2 loops: um para os percentuais de falha e outro para os anos para os quais queremos contar o número de estações.
+
+```{r}
+# Vetores
+thresholds <- seq(10, 40, 10) # porcentagem de falhas
+min_years <- 4:10             # de 4 a 10 anos (pelo menos)
+
+df_threshold_sweep <- tibble(threshold = integer(0),
+                             min_years = integer(0),
+                             n_gauges = integer(0))
+  
+for(fail in thresholds){
+  
+  gauge_pass <- subset(df_summary_yr, fail_prct <= fail) # pegar somente as linhas que são "aprovadas"
+  yrs_per_gauge <- table(gauge_pass$gauge_code)          # calcula o número de anos pro estação (vetor com nomes)
+  
+  for(yr in min_years){
+    
+    n_gauge_yr <- sum(yrs_per_gauge >= yr)          # conta qtas estações têm pelo menos 'yr' anos
+    df_proxy <- tibble(threshold = fail,            # montar uma nova tabela intermediária
+                       min_years = yr,
+                       n_gauges = n_gauge_yr)
+    df_threshold_sweep <- rbind(df_threshold_sweep, # colar linhas à tabela original
+                                df_proxy)
+    
+  }
+  
+}
+
+# Visualização
+df_threshold_sweep %>% 
+  mutate(threshold = factor(threshold, levels = thresholds)) %>% 
+  ggplot(aes(x = min_years, y = n_gauges)) +
+  geom_col(fill = "steelblue") +
+  geom_text(aes(label = n_gauges), vjust = -0.3, size = 3) +
+  facet_wrap(~threshold, nrow = 4, labeller = labeller(threshold = function(x) paste0(x, "% falhas"))) +
+  scale_x_continuous(breaks = seq(min(df_threshold_sweep$min_years), max(df_threshold_sweep$min_years), by = 1)) +
+  scale_y_continuous(limits = c(0,100)) +
+  labs(x = "Número de anos por estação",
+       y = "Número de estações") +
+  theme_minimal() +
+  theme(strip.text = element_text(face = "bold"),
+        legend.position =  "bottom",
+        plot.background = element_rect(color = "white"),
+        panel.border = element_rect(color = "black", fill = NA),
+        text = element_text(family = "serif"))
+
+# 20% e mínimo 6-8 anos
+```
