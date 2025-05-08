@@ -174,8 +174,13 @@ rs_info_table <-
 ## Export to RDS
 
 ```{r}
+# Export (for the first time)
 saveRDS(rs_data_table, file = "Dados Gerados/rs_table_data.rds")
 saveRDS(rs_info_table, file = "Dados Gerados/rs_table_info.rds")
+
+# Read RDS for later use when needed
+rs_data_table <- readRDS(file = "Dados Gerados/rs_data_table.rds")
+rs_info_table <- readRDS(file = "Dados Gerados/rs_info_table.rds")
 ```
 
 ## Visualization
@@ -511,7 +516,7 @@ for(fail in thresholds){
     df_threshold_sweep <- rbind(df_threshold_sweep, # colar linhas à tabela original
                                 df_proxy)
     
-  }
+  }; rm(df_proxy); gc()
   
 }
 
@@ -520,7 +525,7 @@ df_threshold_sweep %>%
   mutate(threshold = factor(threshold, levels = thresholds)) %>% 
   ggplot(aes(x = min_years, y = n_gauges)) +
   geom_col(fill = "steelblue") +
-  geom_text(aes(label = n_gauges), vjust = -0.3, size = 3) +
+  geom_text(aes(label = n_gauges), vjust = -0.3, size = 3, family = "serif") +
   facet_wrap(~threshold, nrow = 4, labeller = labeller(threshold = function(x) paste0(x, "% falhas"))) +
   scale_x_continuous(breaks = seq(min(df_threshold_sweep$min_years), max(df_threshold_sweep$min_years), by = 1)) +
   scale_y_continuous(limits = c(0,100)) +
@@ -535,3 +540,21 @@ df_threshold_sweep %>%
 
 # 20% e mínimo 6-8 anos
 ```
+
+Baseado na imagem acima, vamos adicionar as informações com base no limiar de 20% e adicionar a informação de quantidade de anos "completos" ou "úteis" como um novo atributo em `rs_info_table` para permitir uma filtragem utilizando o limiar de mínimo de anos necessários para análise (por exemplo, 6 anos). As informações sobre a quantidade de anos estão em `df_summary_yr_fail`.
+
+```{r}
+rs_info_table$n_years <- df_summary_yr_fail$n_yr_filter[fastmatch::fmatch(x = rs_info_table$gauge_code, table = df_summary_yr_fail$gauge_code)]
+rs_info_table$n_years_total <- df_summary_yr_fail$n_yr_total[fastmatch::fmatch(x = rs_info_table$gauge_code, table = df_summary_yr_fail$gauge_code)]
+```
+
+Agora que temos essas informações em uma das nossas tabelas principais, vamos desenvolver um código para ilustrar como poderia ser feita uma filtragem a partir de um limiar de mínimo de anos.
+```{r}
+# Definir limiar e extrair código das estações
+min_yr_threshold <- 6                                                                # mínimo de 6 anos
+gauges_min_yr <- rs_info_table$gauge_code[rs_info_table$n_years >= min_yr_threshold] # vetor com o código das estações que têm pelo menos 6 anos de dados
+
+# Filtrar a lista de séries para manter somente as com o mínimo de anos exigido
+list_filled_min_yr <- list_filled[gauges_min_yr]
+```
+
